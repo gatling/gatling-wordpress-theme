@@ -1,49 +1,7 @@
 /*
 Theme Name: Gatling
-Theme URI: https://gitlab.gatling.io/notdryft/gatling-wordpress-theme
-Description: Gatling Wordpress Theme
-Author: Guillaume Corré
-Author URI: http://gatling.io
-Template: zerif-pro
-Version: 0.1.0-SNAPSHOT
+Description: Thème sur mesure pour Gatling
+Author: Nanoyaki
+Author URI: https://nanoyaki.com
+Version: 1.0
 */
-
-::selection {
-  background: #e67800;
-}
-
-::-moz-selection {
-  background: #e67800;
-}
-
-a {
-  color: #e67800;
-}
-
-a:hover {
-  color: #FA8300;
-}
-
-p {
-  background-color: #e67800;
-}
-
-.entry-content input[type="button"]:hover,
-.entry-content input[type="reset"]:hover,
-.entry-content input[type="submit"]:hover {
-  background: #FA8300;
-}
-
-.woocommerce-page .woocommerce-message {
-  background: #20AA73;
-  color: #FFF;
-  list-style: none;
-}
-
-.woocommerce-page .woocommerce #payment ul.payment_methods {
-  padding: 1em;
-}
-
-.woocommerce-page .woocommerce #payment ul.payment_methods li {
-  margin-left: 2em;
-}

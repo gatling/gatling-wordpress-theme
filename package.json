@@ -1,0 +1,32 @@
+{
+  "name": "gatling",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp build",
+    "js": "./node_modules/.bin/gulp js",
+    "watch": "./node_modules/.bin/gulp watch"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.1.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-line-ending-corrector": "^1.0.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "jquery": "^3.3.1",
+    "prismjs": "^1.16.0",
+    "slick-carousel": "^1.8.1"
+  }
+}
