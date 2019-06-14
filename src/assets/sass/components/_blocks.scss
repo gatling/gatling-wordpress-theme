@@ -414,8 +414,11 @@
       }
 
       .btn {
-        background-color: #6772e5;
         margin-top: 60px;
+      }
+
+      .btn-secondary {
+        background-color: #6772e5;
       }
     }
   }
@@ -1514,6 +1517,11 @@
 
       .btn {
         margin-top: 40px;
+        width: 300px;
+      }
+
+      .btn-primary {
+        background-color: #6772e5;
       }
     }
 
