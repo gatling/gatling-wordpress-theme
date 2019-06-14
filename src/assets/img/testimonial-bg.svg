@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="865px" height="568px" viewBox="0 0 865 568" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Tesmontial@1,5x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="785" height="488" rx="8"></rect>
+        <filter x="-8.3%" y="-11.3%" width="116.6%" height="126.6%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.689993956   0 0 0 0 0.768169052   0 0 0 0 0.861979167  0 0 0 0.315696023 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Design-UX-Homepage-Gatling" transform="translate(-261.000000, -3527.000000)">
+            <g id="Tesmontial" transform="translate(301.000000, 3557.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <use fill="#0A76CF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group-3" mask="url(#mask-2)">
+                    <g transform="translate(-143.000000, -137.000000)" id="Oval">
+                        <ellipse fill="#0387F4" cx="538" cy="503" rx="477" ry="467"></ellipse>
+                        <ellipse fill="#0392F4" cx="326.5" cy="320" rx="326.5" ry="320"></ellipse>
+                        <ellipse fill="#039FF4" cx="225.5" cy="257" rx="225.5" ry="221"></ellipse>
+                        <ellipse fill="#03A9F4" cx="145" cy="156.5" rx="123" ry="120.5"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

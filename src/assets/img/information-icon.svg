@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon information</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Design-UX-Open-source" transform="translate(-973.000000, -880.000000)">
+            <g id="icon-information" transform="translate(973.000000, 880.000000)">
+                <g id="training-session" fill="#FF9E2A" fill-rule="nonzero">
+                    <g id="Group-38">
+                        <g id="sharing-copy">
+                            <circle id="Oval" cx="21" cy="21" r="21"></circle>
+                        </g>
+                    </g>
+                </g>
+                <g id="c-info" transform="translate(12.000000, 12.000000)">
+                    <circle id="Oval" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" cx="9.5" cy="9.5" r="9.5"></circle>
+                    <path d="M9.5,7.6 L9.5,14.5666667" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                    <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="9.5" cy="4.11666667" r="1"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

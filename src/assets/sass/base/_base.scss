@@ -1,0 +1,117 @@
+html {
+	font-size: 60.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Montserrat', sans-serif;
+  color: $grey-main;
+}
+
+a {
+  color: $secondary;
+  text-decoration: none;
+}
+
+p {
+	line-height: 2.1rem;
+
+  strong {
+		color: $black;
+		font-weight: 600;
+	}
+}
+
+h1,
+h2,
+h3 {
+	color: $black;
+}
+
+.h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3.7rem;
+  margin-bottom: 10px;
+}
+
+.h2 {
+	font-size: 3.9rem;
+  padding-bottom: 20px;
+
+  strong {
+    font-weight: bold;
+    color: $primary;
+  }
+}
+
+.h2-bar {
+  padding-bottom: 30px;
+  
+  &::before {
+    width: 6px;
+    height: 2.7rem;
+    margin-right: 10px;
+    display: inline-block;
+    content: "";
+    background-color: $primary;
+  }
+}
+
+.main-content {
+  margin-top: 140px;
+  padding-bottom: 100px;
+  background-image: linear-gradient(to top, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
+
+  @media screen and (max-width: 1150px) {
+    margin-top: 65px;
+  }
+
+  .main-header {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+
+    h2 {
+      font-size: 2.4rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+//Wordpress 
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+ol {
+  display: block;
+  list-style-type: decimal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+  line-height: 2.4rem;
+
+  li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.wp-caption-text {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+pre {
+  line-height: 1.6;
+  padding: 5px 10px !important;
+}

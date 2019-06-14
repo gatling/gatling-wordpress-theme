@@ -1,0 +1,263 @@
+.blog {
+  .main-header {
+    background-image: url('../img/testimonial-bg.png');
+    padding: 100px 0;
+
+    @include background(cover, center, no-repeat);
+
+    .h1 {
+      font-size: 6rem;
+      color: $white;
+
+      a {
+        color: $white;
+      }
+    }
+
+    h2 {
+      color: $white;
+    }
+  }
+
+  .container {
+    display: flex;
+
+    .sidebar,
+    .articles {
+      padding-top: 60px;
+    }
+
+    .sidebar {
+      width: 30%;
+      border-right: 1px solid #ccc;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      .sidebar--element {
+        margin-bottom: 50px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      h2 {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      .category-list {
+        li {
+          margin-bottom: 10px;
+
+          &::before {
+            content: "";
+            display: inline-block;
+            height: 5px;
+            width: 5px;
+            background-color: $primary;
+            border-radius: 100%;
+            position: relative;
+            top: -2px;
+            margin-right: 10px;
+
+            @media screen and (max-width: 700px) {
+              display: none;
+            }
+          }
+        }
+
+        a {
+          color: $grey-main;
+
+          &.active {
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .articles {
+      width: 70%;
+      padding-left: 50px;
+
+      article {
+        background-color: $background;
+        @include background;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        border-radius: 8px;
+        box-shadow: 0 10px 40px 0 rgba(176,196,220,0.37);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .header {
+          height: 250px;
+        }
+
+        .content {
+          background-color: rgba(255, 255, 255, 0.9);
+          padding: 25px 30px;
+          color: $black;
+          border-radius: 0 0 8px 8px;
+          word-break: break-word;
+
+          ul {
+            list-style-type: disc;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 40px;
+          
+            li {
+              margin-bottom: 10px;
+              line-height: 2.4rem;
+          
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+        
+            li::before {
+              display: none;
+            }
+          }
+
+          h2 {
+            font-weight: 600;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+
+            a {
+              color: $black;
+            }
+          }
+
+          .btn {
+            margin-top: 15px;
+            padding: 15px 15px;
+          }
+        }
+
+        footer {
+          display: flex;
+          justify-content: space-between;
+          color: $grey-main;
+          margin-top: 15px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      flex-direction: column-reverse;
+
+      .articles,
+      .sidebar {
+        width: 100%;
+      }
+
+      .sidebar {
+        border-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+
+        .twitter-feed {
+          display: none;
+        }
+      }
+
+      .articles {
+        padding-left: 0;
+        padding-top: 60px;
+
+        article {
+          .header {
+            height: 0;
+          }
+        }
+
+        footer {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  &.single-post {
+    .main-header {
+      background-color: $background;
+      padding: 150px 0;
+
+      @include background();
+
+      @media screen and (max-width: 600px) {
+        padding: 50px 0;
+      }
+
+      .h1 {
+        font-size: 3.5em;
+        width: 60%;
+        margin: auto;
+        color: $primary;
+        text-shadow: 1px 1px 5px #ccc;
+
+        a {
+          color: $primary;
+        }
+      }
+
+      h2 {
+        color: $black;
+        font-weight: 600;
+      }
+    }
+
+    .articles {
+      article {
+        footer {
+          margin-top: 40px;
+        }
+
+        .content {
+          border-radius: 8px;
+
+          @media screen and (max-width: 600px) {
+            padding: 30px 5px;
+          }
+        }
+      }
+    }
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+
+    iframe, embed, object {
+      max-width: 100%;
+    }
+
+    .navigation {
+      display: flex;
+
+      a {
+        width: 50%;
+
+        &:nth-child(1) {
+          margin-left: 10px;
+        }
+
+        &:nth-child(2) {
+          text-align: right;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

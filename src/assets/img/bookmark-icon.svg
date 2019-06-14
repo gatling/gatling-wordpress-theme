@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="26px" viewBox="0 0 22 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>book-bookmark-2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Design-UX-Enterprise" transform="translate(-921.000000, -2962.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="Group-2" transform="translate(902.000000, 2949.000000)">
+                <g id="book-bookmark-2" transform="translate(20.000000, 14.000000)">
+                    <polyline id="Path" stroke-linecap="square" points="15.2727273 0 15.2727273 9.81818182 12 7.63636364 8.72727273 9.81818182 8.72727273 0"></polyline>
+                    <path d="M19.6363636,18.5454545 L19.6363636,0 L2.18181818,0 C0.976363636,0 0,0.976363636 0,2.18181818 L0,21.2727273" id="Path"></path>
+                    <path d="M2.72727273,18.5454545 L19.6363636,18.5454545 L19.6363636,24 L2.72727273,24 C1.22072727,24 0,22.7792727 0,21.2727273 L0,21.2727273 C0,19.7661818 1.22072727,18.5454545 2.72727273,18.5454545 Z" id="Path" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

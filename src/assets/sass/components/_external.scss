@@ -1,0 +1,98 @@
+//Style external components from plugins, widgets, etc.
+.fullwidth-form {
+  width: 70%;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.newsletter-form {
+  width: 40% !important;
+  margin: 0 !important;
+
+  @media screen and (max-width: 1000px) {
+    width: 50% !important;
+  }
+
+  @media screen and (max-width: 880px) {
+    width: 100% !important;
+  }
+
+  > div:first-of-type {
+    position: relative;
+
+    > div:last-of-type {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30%;
+    }
+
+    @media screen and (max-width: 600px) {
+      > div:last-of-type {
+        position: static;
+        width: 70%;
+        margin: auto;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .jsonform-error-consents {
+    color: $white;
+
+    label.checkbox {
+      color: $white !important;
+      font-family: 'Montserrat', sans-serif !important;
+
+      span {
+        position: relative;
+        top: -2.5px;
+      }
+    }
+  }
+
+  input[type=email] {
+    color: $white !important;
+    font-size: 1.4rem !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border: none !important;
+    border-radius: 4px 0 0 4px !important;
+    padding: 12.5px 20px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    width: 70% !important;
+    height: 37px !important;
+
+    @media screen and (max-width: 600px) {
+      border-radius: 4px !important;
+      width: 100% !important;
+    }
+
+    &::placeholder {
+      color: $white !important;
+    }
+  }
+
+  input[type=submit] {
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $white !important;
+    border: none;
+    color: $secondary !important;
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    border-radius: 0 4px 4px 0 !important;
+    width: 100% !important;
+    text-transform: capitalize;
+
+    @media screen and (max-width: 600px) {
+      border-radius: 4px !important;
+    }
+  }
+}
+
+//Slick
+.slick-dotted.slick-slider {
+  margin-bottom: 0 !important;
+}

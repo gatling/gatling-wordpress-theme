@@ -1,6 +1,6 @@
 .idea/
 .vscode/
 
-assets/
-backups/
-node_modules/
+/assets/
+/backups/
+/node_modules/

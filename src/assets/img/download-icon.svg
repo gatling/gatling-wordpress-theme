@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="50px" viewBox="0 0 55 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>file-download-94</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Design-UX-Open-source" transform="translate(-375.000000, -1572.000000)" stroke="#111111" stroke-width="2.3">
+            <g id="file-download-94" transform="translate(377.000000, 1572.000000)">
+                <path d="M51.4285714,34.2857143 L0,34.2857143" id="Path"></path>
+                <path d="M25.7142857,0 L25.7142857,22.2857143" id="Path"></path>
+                <polyline id="Path" stroke-linecap="square" points="39.4285714 15.4285714 41.1428571 15.4285714 51.4285714 34.2857143 51.4285714 48 0 48 0 34.2857143 10.2857143 15.4285714 12 15.4285714"></polyline>
+                <polyline id="Path" stroke-linecap="square" points="32.5714286 15.4285714 25.7142857 22.2857143 18.8571429 15.4285714"></polyline>
+                <path d="M42.8571429,41.1428571 L36,41.1428571" id="Path" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

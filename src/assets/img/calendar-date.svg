@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="27px" viewBox="0 0 29 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>calendar-date</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Version-responsive-Consulting" transform="translate(-45.000000, -3668.000000)">
+            <g id="calendar-date" transform="translate(46.000000, 3669.000000)">
+                <rect id="Rectangle" stroke="#4956DD" stroke-width="2" stroke-linecap="square" x="4.76190476" y="13.0952381" width="2.38095238" height="1.19047619"></rect>
+                <rect id="Rectangle" stroke="#4956DD" stroke-width="2" stroke-linecap="square" x="11.9047619" y="13.0952381" width="2.38095238" height="1.19047619"></rect>
+                <rect id="Rectangle" stroke="#4956DD" stroke-width="2" stroke-linecap="square" x="4.76190476" y="19.047619" width="2.38095238" height="1.19047619"></rect>
+                <rect id="Rectangle" stroke="#4956DD" stroke-width="2" stroke-linecap="square" x="11.9047619" y="19.047619" width="2.38095238" height="1.19047619"></rect>
+                <rect id="Rectangle" stroke="#4956DD" stroke-width="2" stroke-linecap="square" x="19.047619" y="13.0952381" width="2.38095238" height="1.19047619"></rect>
+                <rect id="Rectangle" fill="#4956DD" fill-rule="nonzero" x="4.76190476" y="13.0952381" width="2.38095238" height="1.19047619"></rect>
+                <rect id="Rectangle" fill="#4956DD" fill-rule="nonzero" x="11.9047619" y="13.0952381" width="2.38095238" height="1.19047619"></rect>
+                <rect id="Rectangle" fill="#4956DD" fill-rule="nonzero" x="4.76190476" y="19.047619" width="2.38095238" height="1.19047619"></rect>
+                <rect id="Rectangle" fill="#4956DD" fill-rule="nonzero" x="11.9047619" y="19.047619" width="2.38095238" height="1.19047619"></rect>
+                <rect id="Rectangle" fill="#4956DD" fill-rule="nonzero" x="19.047619" y="13.0952381" width="2.38095238" height="1.19047619"></rect>
+                <rect id="Rectangle" stroke="#4956DD" stroke-width="2" stroke-linecap="square" x="0" y="3.57142857" width="26.1904762" height="21.4285714"></rect>
+                <path d="M19.047619,3.57142857 L19.047619,0" id="Path" stroke="#4956DD" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M7.14285714,3.57142857 L7.14285714,0" id="Path" stroke="#4956DD" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M0,8.33333333 L26.1904762,8.33333333" id="Path" stroke="#4956DD" stroke-width="2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

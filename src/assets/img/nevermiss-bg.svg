@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="690px" height="520px" viewBox="0 0 690 520" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Deco Never miss@1,5x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E7ECEF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="260" cy="260" r="260"></circle>
+        <rect id="path-4" x="154" y="122" width="496" height="324" rx="8"></rect>
+        <filter x="-13.1%" y="-17.0%" width="126.2%" height="140.1%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.689993956   0 0 0 0 0.768169052   0 0 0 0 0.861979167  0 0 0 0.195640297 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Design-UX-Homepage-Gatling" transform="translate(-93.000000, -1958.000000)">
+            <g id="Group-43" transform="translate(1.000000, 1835.000000)">
+                <g id="Deco-Never-miss" transform="translate(92.000000, 123.000000)">
+                    <g id="Bulle-bg">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-2"></use>
+                        </mask>
+                        <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    </g>
+                    <rect id="Rectangle-Copy-3" fill="#FFFFFF" opacity="0.294433594" x="96" y="196" width="496" height="324" rx="8"></rect>
+                    <rect id="Rectangle-Copy-2" fill="#FFFFFF" opacity="0.371023996" x="117" y="171" width="496" height="324" rx="8"></rect>
+                    <rect id="Rectangle-Copy" fill="#FFFFFF" x="135" y="146" width="496" height="324" rx="8"></rect>
+                    <g id="Rectangle">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

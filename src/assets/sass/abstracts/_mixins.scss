@@ -1,0 +1,139 @@
+@mixin background($size: cover, $position: center, $repeat: no-repeat) {
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+  }
+  
+@mixin push--auto() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin pseudo() {
+  content: "";
+  display: block;
+}
+
+@mixin slick-dots() {
+  .slick-dots li.slick-active button:before {
+    color: $primary;
+  }
+
+  .slick-dots li button:before {
+    font-size: 8px;
+  }
+
+  .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+    opacity: 0.4;
+  }
+}
+
+$breakpoints: (
+  "phone":        400px,
+  "phone-wide":   480px,
+  "phablet":      560px,
+  "tablet-small": 640px,
+  "tablet":       768px,
+  "tablet-wide":  1024px,
+  "desktop":      1248px,
+  "desktop-wide": 1440px,
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type == max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin no-selection() {
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+@mixin custom-checkbox() {
+  /* Customize the label (the container) */
+  .checkbox-ct {
+    margin-top: 30px;
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 300;
+    color: #FEFEFE;
+    
+    @include no-selection;
+  }
+
+  /* Hide the browser's default radio button */
+  .checkbox-ct input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border: 1px solid $white;
+    border-radius: 3px;
+  }
+
+  /* On mouse-over, add a grey background color 
+  .checkbox-ct:hover input ~ .checkmark {
+    background-color: #ccc;
+  }*/
+
+  /* When the radio button is checked, add a blue background */
+  .checkbox-ct input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .checkbox-ct input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .checkbox-ct .checkmark:after {
+    left: 4px;
+    top: 0.5px;
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  label {
+    color: #FEFEFE;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+}

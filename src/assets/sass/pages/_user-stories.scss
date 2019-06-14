@@ -1,0 +1,146 @@
+.user-stories {
+  header {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 30px;
+  }
+
+  .back-link {
+    font-size: 2.1rem;
+
+    .back--text {
+      margin-left: 15px;
+      font-size: 1.5rem;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .icon {
+    max-width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .quote {
+    color: $white;
+    background-image: url('../img/testimonial-bg.png');
+    border-radius: 8px;
+    box-shadow: 0 4px 15px 0 rgba(7,42,68,0.1);
+    padding: 40px 30px;
+    width: 60%;
+    margin-bottom: 60px;
+    text-align: center;
+    
+    @include push--auto;
+    @include background(cover, center, no-repeat);
+
+    @media screen and (max-width: 1100px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+
+    img {
+      margin-bottom: 30px;
+      margin-top: 10px;
+      border-radius: 100%;
+      max-width: 120px;
+    }
+
+    h2 {
+      color: $white;
+      font-weight: 600;
+      font-size: 3.1rem;
+      line-height: 4rem;
+      margin-bottom: 30px;
+    }
+
+    .author {
+      text-align: right;
+    }
+  }
+
+  .post-thumbnail {
+    float: left;
+    margin-top: 5px;
+    max-width: 130px;
+
+    @media screen and (max-width: 1100px) {
+      float: none;
+      display: block;
+      margin-bottom: 20px;
+      max-width: 200px;
+      width: 80%;
+      
+      @include push--auto;
+    }
+  }
+
+  .text {
+    width: 70%;
+    padding-bottom: 50px;
+    
+    @include push--auto;
+
+    @media screen and (max-width: 1100px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+  }
+}
+
+.archive-user-stories {
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    width: 90%;
+   
+    @include push--auto;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    header {
+      width: 30%;
+
+      h2 {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 2.4rem;
+      }
+
+      img {
+        max-width: 80px;
+      }
+    }
+
+    .text {
+      width: 70%;
+      padding: 30px 0;
+
+      .btn {
+        margin-top: 30px;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      header,
+      .text {
+        width: 100%;
+      }
+
+      header {
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+  }
+}

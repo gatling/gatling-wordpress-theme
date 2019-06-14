@@ -1,0 +1,205 @@
+.default-template {
+  padding-top: 0;
+  
+  h1 {
+    font-size: 7.6rem;
+    line-height: 8rem;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 680px) {
+      font-size: 4.4rem;
+      line-height: 5rem;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  .landing-screen {
+    padding-top: 120px;
+    padding-bottom: 150px;
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(-80deg, #FFF 55%, #F0F5FB 55%);
+    overflow: hidden;
+
+    .landing--text,
+    .landing--screenshot {
+      width: 50%;
+    }
+    
+    @media screen and (max-width: 1300px) {
+      .landing--text {
+        width: 70%;
+      }
+
+      .landing--screenshot {
+        width: 30%;
+      }
+    }
+    
+    @media screen and (max-width: 1150px) {
+      padding-top: 130px;
+    }
+
+    @media screen and (max-width: 950px) {
+      padding-bottom: 0;
+
+      .landing--screenshot,
+      .landing--text {
+        width: 100%;
+      }
+    }
+
+    .container {
+      display: flex;
+      padding: 0;
+
+      @media screen and (max-width: 950px) {
+        flex-wrap: wrap;
+      }
+    }
+
+    .landing--screenshot {
+      overflow: hidden;
+      position: absolute;
+      left: 50%;
+      border-radius: 8px 0 0 8px;
+      margin-bottom: 25px;
+      box-shadow: 10px 10px 20px 0 rgba(176,196,220,0.33);
+
+      &.image-only {
+        border-radius: 0;
+        box-shadow: none;
+
+        img {
+          position: relative;
+          left: 10%;
+          max-height: 600px;
+        }
+
+        @media screen and (max-width: 950px) {
+          text-align: center;
+          position: relative;
+          min-width: 110vw;
+          left: -10vw;
+          margin-top: 30px;
+
+          img {
+            margin-top: 30px;
+            position: static;
+            width: 100%;
+            max-height: none;
+          }
+        }
+      }
+
+      .image-in-browser {
+        border-top-right-radius: 0;
+        height: 560px;
+
+        img {
+          top: 27px;
+          height: calc(100% - 27px);
+          border-radius: 0 0 0 4px;
+        }
+      }
+
+      @media screen and (max-width: 1300px) {
+        left: 70%;
+      }
+
+      @media screen and (max-width: 950px) {
+        position: static;
+      }
+    }
+
+    .landing--text {
+      margin-top: 80px;
+      padding-right: 30px;
+
+      @media screen and (max-width: 950px) {
+        padding-right: 0;
+      }
+
+      h1,
+      p {
+        padding-left: 20px;
+      }
+
+      p {
+        font-size: 2.6rem;
+        margin-bottom: 100px;
+        white-space: pre-line;
+        line-height: 3.4rem;
+
+        @media screen and (max-width: 680px) {
+          margin-bottom: 60px;
+          font-size: 1.7rem;
+        }
+      }
+
+      .sub-image {
+        width: 70%;
+        min-width: 100px;
+        position: relative;
+        top: -40px;
+      }
+
+      .btn {
+        margin-right: 25px;
+        min-width: 40%;
+        text-align: center;
+
+        @media screen and (max-width: 680px) {
+          margin-right: 0;
+          margin-bottom: 15px;
+          width: 95%;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      @media screen and (max-width: 950px) {
+        margin-top: 0;
+        text-align: center;
+
+        h1,
+        p {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .section-00 {
+    background-color: $background;
+    padding-bottom: 60px;
+    padding-top: 30px;
+  }
+
+  .section-01 {
+    background-color: $background;
+    background-image: url('../img/strip-patterns-01.svg');
+    
+    @include background(contain, center, repeat);
+  }
+
+  .section-02 {
+    //Gradient background
+    background-color: $background;
+    background-image: linear-gradient(to bottom, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
+  }
+
+  .section-04 {
+    background-image: url('../img/strip-patterns-02.svg'), linear-gradient(to top, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
+
+    @include background(contain, center, repeat);
+  }
+
+  .section-05 {
+    background-image: linear-gradient(to bottom, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
+  }
+}
