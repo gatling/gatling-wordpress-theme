@@ -364,13 +364,13 @@
           <div class="container get-gatling">
             <h2 class="h2 h2-bar"><?php the_sub_field('title'); ?></h2>
             <div class="method-ct">
-            <?php $method1 = get_sub_field('first_method'); ?>
+              <?php $method1 = get_sub_field('first_method'); ?>
               <div class="method">
                 <h3><span class="round-number">1</span><?php echo $method1['title']; ?></h3>
                 <p class="text-center"><?php echo $method1['text']; ?></p>
                 <div class="text-center">
                   <img class="icon" src="<?php add_img_html('download-icon.svg') ;?>" alt="Download icon">
-                  <a href="<?php echo $method1['button_link']['link']; ?>" class="btn btn-primary"><?php echo $method1['button_link']['title']; ?></a>
+                  <a href="<?php echo $method1['button_link']['url']; ?>" class="btn btn-primary"><?php echo $method1['button_link']['title']; ?></a>
                 </div>
               </div>
               <?php $method2 = get_sub_field('second_method'); ?>
