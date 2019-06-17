@@ -118,9 +118,10 @@
     }
 
     .btn-primary {
-      text-transform: none;
-      padding: 15px;
+      background-color: $secondary-2;
       color: $white;
+      padding: 15px;
+      text-transform: none;
 
       &:hover {
         color: $white;
