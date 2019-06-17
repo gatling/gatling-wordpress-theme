@@ -47,13 +47,12 @@
         <?php endif; ?>
     <?php endwhile; endif; ?>
 
-
     <?php
     if (have_rows('flexible_content')) :
         $index = 1;
         while(have_rows('flexible_content')) : the_row(); ?>
 
-            <section class="section<?php if ($index < 6) { echo "-0".$index; } ?>">
+            <section id="section<?php if ($index < 6) { echo "-0".$index; }?>" class="section<?php if ($index < 6) { echo "-0".$index; } ?>">
                 <?php get_flexible_block(); ?>
             </section>
             
