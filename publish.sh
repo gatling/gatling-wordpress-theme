@@ -3,7 +3,7 @@
 set -e
 set -x
 
-host=recette.gatling.io
+host=gatling.io
 
 destination=$host:gatling/themes/gatling
 
