@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // Load includes
 
@@ -8,7 +8,7 @@ require_once get_template_directory() . '/includes/templating.php';
 
 // ACF Option page
 
-if( function_exists('acf_add_options_page') ) {
+if ( function_exists('acf_add_options_page') ) {
   acf_add_options_page('Options du thème');
 }
 
@@ -62,24 +62,24 @@ function remove_more_link_scroll( $link ) {
 
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
 
-//Get WP Menu
-function my_get_menu($location){
+// Get WP Menu
+
+function my_get_menu($location) {
   $menu_locations = get_nav_menu_locations();
   $hero_menu = $menu_locations[$location];
   $menu_items = wp_get_nav_menu_items( $hero_menu );
-  
+
   $menu_ordered = array();
-  
-  foreach ($menu_items as $item){
-    if ($item->menu_item_parent == 0){
+
+  foreach ($menu_items as $item) {
+    if ($item->menu_item_parent == 0) {
       $menu_ordered[$item->ID] = $item;
       $menu_ordered[$item->ID]->children = array();
-    }
-    else {
+    } else {
       $menu_ordered[$item->menu_item_parent]->children[] = $item;
     }
   }
-  
+
   return $menu_ordered;
 }
 

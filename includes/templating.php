@@ -1,9 +1,7 @@
 <?php
   function get_flexible_block() {
-
     switch (get_row_layout()):
-      case 'blocks_icon_text':
-?>
+      case 'blocks_icon_text': ?>
         <?php if (have_rows('block')): ?>
           <div class="container icon-block-ct">
             <div class="icon-block--wrapper advantages-slick">

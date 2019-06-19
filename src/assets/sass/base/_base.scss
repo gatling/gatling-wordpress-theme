@@ -1,11 +1,11 @@
 html {
   background-color: $white;
-	font-size: 60.5%;
+  font-size: 60.5%;
 }
 
 body {
-	font-size: 1.6rem;
-	font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
   color: $grey-main;
 }
 
@@ -15,18 +15,18 @@ a {
 }
 
 p {
-	line-height: 2.1rem;
+  line-height: 2.1rem;
 
   strong {
-		color: $black;
-		font-weight: 600;
-	}
+    color: $black;
+    font-weight: 600;
+  }
 }
 
 h1,
 h2,
 h3 {
-	color: $black;
+  color: $black;
 }
 
 .h1 {
@@ -37,7 +37,7 @@ h3 {
 }
 
 .h2 {
-	font-size: 3.9rem;
+  font-size: 3.9rem;
   padding-bottom: 20px;
 
   strong {

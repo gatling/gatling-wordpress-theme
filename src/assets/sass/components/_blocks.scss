@@ -1,4 +1,5 @@
-//Block with title and icon + timeline block
+// Block with title and icon + timeline block
+
 .icon-block-ct {
   padding-top: 80px;
   padding-bottom: 60px;
@@ -96,7 +97,8 @@
   }
 }
 
-//Floating circles block (with 8 circles)
+// Floating circles block (with 8 circles)
+
 .floating-circles--block {
   padding-top: 0;
   padding-bottom: 50px;
@@ -227,21 +229,22 @@
 }
 
 @keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(236,239,255,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(236,239,255,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px #ECEFFF;
-		transform: translatey(0px);
-	}
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(236,239,255,0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(236,239,255,0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px #ECEFFF;
+    transform: translatey(0px);
+  }
 }
 
-//Block with big image and text
+// Block with big image and text
+
 .big-image--block {
   display: flex;
   justify-content: space-between;
@@ -367,7 +370,8 @@
   }
 }
 
-//Screenshots block
+// Screenshots block
+
 .screenshots-block {
   width: 85%;
   max-width: none;
@@ -453,7 +457,8 @@
   }
 }
 
-//Browser image container
+// Browser image container
+
 .image-in-browser {
   background-image: url('../img/empty-browser--light.svg');
   background-size: cover;
@@ -470,7 +475,8 @@
   }
 }
 
-//Testimonials slider
+// Testimonials slider
+
 .testimonials-slick {
   overflow: hidden;
   padding-top: 100px;
@@ -595,7 +601,8 @@
   @include slick-dots;
 }
 
-//Press slider
+// Press slider
+
 .press {
   padding-top: 140px;
   padding-bottom: 90px;
@@ -647,7 +654,8 @@
   }
 }
 
-//Text paragraphs
+// Text paragraphs
+
 .text-block {
   padding: 50px 0;
   
@@ -787,7 +795,8 @@
   }
 }
 
-//Text paragraph with links
+// Text paragraph with links
+
 .links-column {
   padding-top: 30px;
   padding-bottom: 60px;
@@ -862,7 +871,8 @@
   }
 }
 
-//Text with bg image
+// Text with bg image
+
 .text-with-bg {
   padding: 70px 0;
   color: $white;
@@ -885,7 +895,8 @@
   }
 }
 
-//Row of images
+// Row of images
+
 .row-gallery {
   display: flex;
 
@@ -909,7 +920,8 @@
   }
 }
 
-//Team presentation
+// Team presentation
+
 .team-block {
   padding-top: 140px;
   padding-bottom: 90px;
@@ -964,7 +976,8 @@
     }
   }
 
-  //Mobile slick
+  // Mobile slick
+
   .team-slick {
     display: none;
 
@@ -992,7 +1005,8 @@
   }
 }
 
-//Welcome to the jungle block
+// Welcome to the jungle block
+
 .hiring-block {
   background-color: #141414;
   display: flex;
@@ -1051,7 +1065,8 @@
   }
 }
 
-//External link block
+// External link block
+
 .external-link-block {
   padding: 130px 0;
   margin-bottom: 115px;
@@ -1087,7 +1102,8 @@
   }
 }
 
-//References block
+// References block
+
 .references-block {
   background-color: $white;
   padding-bottom: 115px;
@@ -1144,7 +1160,8 @@
   }
 }
 
-//Gatling presentation
+// Gatling presentation
+
 .gatling-presentation {
   display: flex;
   align-items: flex-start;
@@ -1229,7 +1246,8 @@
   }
 }
 
-//Get gatling block
+// Get gatling block
+
 .get-gatling {
   padding-top: 30px;
   padding-bottom: 100px;
@@ -1325,7 +1343,8 @@
     }
   }
 
-  //Dropdown
+  // Dropdown
+
   .tool-instruction {
     margin-top: 20px;
 
@@ -1417,7 +1436,8 @@
   }
 }
 
-//Resources block
+// Resources block
+
 .resources-block {
   padding-top: 20px;
   padding-bottom: 50px;
@@ -1492,7 +1512,8 @@
   }
 }
 
-//Text with image
+// Text with image
+
 .text-with-image {
   background-image: none;
   background-color: $background;
@@ -1555,7 +1576,8 @@
   }
 }
 
-//Price comparison
+// Price comparison
+
 .price-comparison {
   padding-top: 80px;
 
@@ -1787,7 +1809,8 @@
   }
 }
 
-//Training block
+// Training block
+
 .training-block {
   display: flex;
   padding-bottom: 150px;
@@ -2132,7 +2155,8 @@
   }
 }
 
-//Demo block
+// Demo block
+
 .demo-block {
   display: flex;
   padding-top: 100px;
@@ -2189,7 +2213,8 @@
   }
 }
 
-//Table comparison block
+// Table comparison block
+
 .table-comparison-block {
   padding-top: 100px;
   padding-bottom: 60px;
