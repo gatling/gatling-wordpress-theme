@@ -76,7 +76,16 @@ function my_get_menu($location){
 	return $menu_ordered;
 }
 
-//Init WP site
+// Remove admin bar inline css
+
+function wl_get_header() {
+  remove_action('wp_head', '_admin_bar_bump_cb');
+}
+
+add_action('get_header', 'wl_get_header');
+
+// Init WP site
+
 function init_site() {
 	register_nav_menus(
 		array(
