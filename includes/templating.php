@@ -7,18 +7,18 @@
             <div class="icon-block--wrapper advantages-slick">
               <?php while (have_rows('block')) : the_row(); ?>
                 <article class="icon-block">
-                    <header>
-                        <img src="<?php the_sub_field('icon'); ?>" alt="Icone">
-                        <h3><?php the_sub_field('title'); ?></h3>
-                    </header>
-                    <?php the_sub_field('text'); ?>
+                  <header>
+                    <img src="<?php the_sub_field('icon'); ?>" alt="Icone">
+                    <h3><?php the_sub_field('title'); ?></h3>
+                  </header>
+                  <?php the_sub_field('text'); ?>
                 </article>
               <?php endwhile; ?>
             </div>
           </div>
           <?php endif;
         break; ?>
-      
+
       <?php case 'floating_circles': ?>
         <div class="floating-circles--block container">
           <div class="container">
@@ -28,16 +28,16 @@
           <?php if (have_rows('business')) : ?>
             <div class="floating-circles">
               <div class="circles-viewport">
-                <?php 
+                <?php
                   $index = 1;
                   while (have_rows('business')) : the_row(); ?>
                   <a class="circle circle-<?php echo $index; ?>" href="<?php the_sub_field('link'); ?>" title="<?php the_sub_field('name'); ?>" target="_blank">
                     <?php $image = get_sub_field('image'); ?>
                     <img src="<?php echo $image['sizes']['medium']; ?>" alt="Logo <?php the_sub_field('name'); ?>">
                   </a>
-                <?php 
+                <?php
                   $index++;
-                  endwhile; 
+                  endwhile;
                 ?>
               </div>
             </div>
@@ -50,7 +50,7 @@
             <div class="big-image--block">
               <div class="features--img">
                 <div class="img--text">
-                  <?php 
+                  <?php
                     $key1 = get_sub_field('key_1');
                     $key2 = get_sub_field('key_2');
                   ?>
@@ -110,13 +110,13 @@
 
         case 'testimonial_slider' : ?>
           <div class="testimonials-slick">
-          <?php 
+          <?php
             $args = array(
                 'post_type'=> 'user-stories',
                 'numberposts' => -1,
                 'meta_key'  => 'is_visible',
                 'meta_value' => true,
-                );              
+                );
 
             $posts = get_posts($args);
           ?>
@@ -146,7 +146,7 @@
           <section class="press container text-center">
             <h2 class="h2"><?php the_sub_field('title'); ?></h2>
             <div class="press-slick">
-              <?php 
+              <?php
                 $press_list = get_sub_field('press');
                 foreach ($press_list as $press) :
               ?>
@@ -328,7 +328,7 @@
               <?php $references = get_sub_field('references'); ?>
               <div class="references-ct">
                 <?php foreach ($references as $ref) : ?>
-                  <a href="<?php echo $ref['link']; ?>" title="<?php echo $ref['title'];?>" target="_blank"><img src="<?php echo $ref['image']['sizes']['medium']; ?>" alt="<?php echo $ref['image']['alt']; ?>"></a>    
+                  <a href="<?php echo $ref['link']; ?>" title="<?php echo $ref['title'];?>" target="_blank"><img src="<?php echo $ref['image']['sizes']['medium']; ?>" alt="<?php echo $ref['image']['alt']; ?>"></a>
                 <?php endforeach; ?>
               </div>
             </div>
@@ -409,7 +409,7 @@
                       <a target="<?php echo $link['button_link']['target']; ?>" href="<?php echo $link['button_link']['url']; ?>" class="btn <?php echo $link['button_color']; ?>"><?php echo $link['button_link']['title']; ?></a>
                     <?php endforeach; ?>
                   </div>
-                </div>      
+                </div>
               <?php endforeach; ?>
             </div>
           </div>
@@ -448,8 +448,8 @@
               <h2 class="<?php if ($image) {echo "hidden";} ?>"><?php the_sub_field('title'); ?></h2>
             </div>
             <div class="container">
-              <?php 
-                $blocs2 = get_sub_field('blocs_2'); 
+              <?php
+                $blocs2 = get_sub_field('blocs_2');
                 $numBlocs = 0;
                 if ($blocs2) {
                   $numBlocs = count($blocs2);

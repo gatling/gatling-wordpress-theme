@@ -54,7 +54,7 @@
       <section id="section<?php if ($index < 6) { echo "-0".$index; }?>" class="section<?php if ($index < 6) { echo "-0".$index; } ?>">
         <?php get_flexible_block(); ?>
       </section>
-        
+
       <?php $index ++;
     endwhile;
   endif; ?>

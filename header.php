@@ -37,7 +37,7 @@
         <div class="navicon"></div>
       </a>
     </div>
-  
+
     <a class="splash-link" href="<?php echo get_home_url(); ?>"><img class="main-logo" src="<?php the_field('logo', 'option'); ?>" alt="Logo Gatling"></a>
 
     <nav>
@@ -47,19 +47,19 @@
           $numItems = count($menu);
           $i = 0;
           foreach($menu as $item) :
-        
+
             //First level menu ?>
             <?php if (count($item->children) === 0) : ?>
               <?php if ($i < ($numItems-1)) : ?>
                 <li class="menu--element">
-                  <a class="menu-link 
-                  <?php 
+                  <a class="menu-link
+                  <?php
                     if (get_permalink($the_page) == $item->url) {
                       echo "active";
                     }
                   ?>
                   " href="<?php echo $item->url; ?>">
-                    <?php echo $item->title; ?> 
+                    <?php echo $item->title; ?>
                   </a>
                 </li>
               <?php endif; ?>
@@ -68,15 +68,15 @@
                 <li><a href="<?php echo $item->url; ?>" class="btn btn-primary"><?php echo $item->title; ?></a></li>
               <?php endif; ?>
             <?php endif; ?>
-            
-            <?php 
+
+            <?php
               //Second level menu
               if(count($item->children) > 0) :
             ?>
               <li class="submenu-li">
-                <a class="menu-link 
-                <?php 
-                  if (get_permalink($the_page) == $item->url || 
+                <a class="menu-link
+                <?php
+                  if (get_permalink($the_page) == $item->url ||
                    basename(get_permalink()) == 'consulting-and-training') {
                     echo "active";
                   }
