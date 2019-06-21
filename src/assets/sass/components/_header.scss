@@ -11,7 +11,7 @@
   top: 0;
   margin: 0;
   
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1360px) {
     padding: 15px 0;
     position: fixed;
     width: 100%;
@@ -26,7 +26,7 @@
   .main-logo {
     height: 60px;
 
-    @media screen and (max-width: 1250px) {
+    @media screen and (max-width: 1450px) {
       height: 40px;
     }
   }
@@ -58,7 +58,7 @@
         @include pseudo;
         @include push--auto;
 
-        @media screen and (max-width: 1150px) {
+        @media screen and (max-width: 1360px) {
           margin-top: 5px;
         }
       }
@@ -81,7 +81,7 @@
         right: 0;
         top: 2px;
 
-        @media screen and (max-width: 1150px) {
+        @media screen and (max-width: 1360px) {
           display: none;
         }
       }
@@ -101,7 +101,7 @@
           padding: 5px 0;
         }
 
-        @media screen and (max-width: 1150px) {
+        @media screen and (max-width: 1360px) {
           opacity: 1;
           margin-top: 5px;
           font-size: 1.2rem;
@@ -131,7 +131,7 @@
       }
     }
 
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 1360px) {
       position: absolute;
       left: 0;
       top: 60px;
@@ -155,13 +155,12 @@
   }
 }
 
-//NAVICON
 .navicon-ct {
   position: absolute;
   left: 5px;
   display: none;
 
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1360px) {
     display: block;
   }
 }
