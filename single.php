@@ -6,38 +6,7 @@
     <h1 class="h1"><a href="<?php echo get_post_type_archive_link('post'); ?>"><?php pll_e("Blog") ;?></a></h1>
     <h2><?php the_title();?></h2>
   </header>
-
   <div class="container">
-    <div class="sidebar">
-      <div class="sidebar--element">
-        <h2><?php pll_e("Search for"); ?></h2>
-        <?php echo get_search_form(); ?>
-      </div>
-
-      <nav class="category-menu sidebar--element">
-        <h2><?php pll_e("Categories"); ?></h2>
-        <ul class="category-list">
-          <?php
-            $categories = get_categories( array(
-              'orderby' => 'name',
-              'order'   => 'ASC'
-            ) );
-
-            foreach( $categories as $category ) : ?>
-              <li>
-                <a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?> (<?php echo $category->count; ?>)</a>
-              </li>
-            <?php endforeach
-          ?>
-        </ul>
-      </nav>
-
-      <div class="twitter-feed sidebar--element">
-        <h2><?php pll_e("Follow us"); ?></h2>
-        <?php the_field('twitter_feed', 'option'); ?>
-      </div>
-    </div>
-
     <div class="articles">
         <?php $_fields = get_fields(); ?>
         <article>
@@ -64,12 +33,36 @@
             </footer>
           </div>
         </article>
-
         <div class="navigation">
             <?php previous_post_link(); ?>
             <?php next_post_link(); ?>
         </div>
-
+    </div>
+    <div class="sidebar">
+      <div class="sidebar--element">
+        <h2><?php pll_e("Search for"); ?></h2>
+        <?php echo get_search_form(); ?>
+      </div>
+      <nav class="category-menu sidebar--element">
+        <h2><?php pll_e("Categories"); ?></h2>
+        <ul class="category-list">
+          <?php
+            $categories = get_categories( array(
+              'orderby' => 'name',
+              'order'   => 'ASC'
+            ) );
+            foreach( $categories as $category ) : ?>
+              <li>
+                <a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?> (<?php echo $category->count; ?>)</a>
+              </li>
+            <?php endforeach
+          ?>
+        </ul>
+      </nav>
+      <div class="twitter-feed sidebar--element">
+        <h2><?php pll_e("Follow us"); ?></h2>
+        <?php the_field('twitter_feed', 'option'); ?>
+      </div>
     </div>
   </div>
 </main>
