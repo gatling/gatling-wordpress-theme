@@ -200,14 +200,14 @@
       }
 
       .h1 {
-        font-size: 3.5em;
-        width: 60%;
+        color: $black;
+        font-size: 3em;
         margin: auto;
-        color: $primary;
         text-shadow: 1px 1px 5px #ccc;
+        width: 60%;
 
         a {
-          color: $primary;
+          color: $black;
         }
       }
 

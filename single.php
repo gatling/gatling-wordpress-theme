@@ -3,8 +3,7 @@
 
 <main class="main-content blog single-post">
   <header class="main-header" style="background-image: linear-gradient(0deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 100%), url('<?php echo the_post_thumbnail_url(); ?>')">
-    <h1 class="h1"><a href="<?php echo get_post_type_archive_link('post'); ?>"><?php pll_e("Blog") ;?></a></h1>
-    <h2><?php the_title();?></h2>
+    <h1 class="h1"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
   </header>
   <div class="container">
     <div class="articles">
