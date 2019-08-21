@@ -202,9 +202,13 @@
       .h1 {
         color: $black;
         font-size: 3em;
-        margin: auto;
+        padding: 50px 0;
         text-shadow: 1px 1px 5px #ccc;
-        width: 60%;
+        width: 100%;
+
+        @media screen and (max-width: 600px) {
+          padding: 0;
+        }
 
         a {
           color: $black;
