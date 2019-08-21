@@ -1578,12 +1578,14 @@
 
 // Price comparison
 
-.price-comparison {
-  padding-top: 80px;
 
-  .container {
-    max-width: 1000px;
-  }
+.price-comparison .container {
+  max-width: 1000px;
+}
+
+.price-comparison,
+.price-comparison-5 {
+  padding-top: 80px;
 
   .title {
     text-align: center;
