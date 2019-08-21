@@ -447,15 +447,15 @@
               <?php endif; ?>
               <h2 class="<?php if ($image) {echo "hidden";} ?>"><?php the_sub_field('title'); ?></h2>
             </div>
-            <div class="container">
-              <?php
-                $blocs2 = get_sub_field('blocs_2');
-                $numBlocs = 0;
-                if ($blocs2) {
-                  $numBlocs = count($blocs2);
-                }
-              ?>
-              <div class="price-slick<?php if ($numBlocs>2) {echo '-2';} ?>">
+            <?php
+              $blocs2 = get_sub_field('blocs_2');
+              $numBlocs = 0;
+              if ($blocs2) {
+                $numBlocs = count($blocs2);
+              }
+            ?>
+            <div class="container<?php if ($numBlocs === 5) {echo '-5';} ?>">
+              <div class="price-slick<?php if ($numBlocs === 5) {echo '-5';} elseif ($numBlocs > 2) {echo '-2';} ?>">
                 <?php if (get_sub_field('template') == 'template-1') : ?>
                   <?php foreach (get_sub_field('blocs_1') as $bloc) : ?>
                     <div class="price-bloc template-1">
