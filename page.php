@@ -28,10 +28,10 @@
       <div class="landing--screenshot <?php if (!$_fields['landing_image']['image_in_browser']) : ?>image-only<?php endif; ?>">
         <?php if ($_fields['landing_image']['image_in_browser']) : ?>
           <div class="image-in-browser">
-            <img src="<?php echo $_fields['landing_image']['image']['sizes']['large']; ?>" alt="<?php echo $_fields['landing_image']['image']['alt']; ?>">
+            <?php echo gtl_image_with_srcset($_fields['landing_image']['image']); ?>
           </div>
         <?php else: ?>
-          <img src="<?php echo $_fields['landing_image']['image']['sizes']['large']; ?>" alt="<?php echo $_fields['landing_image']['image']['alt']; ?>">
+          <?php echo gtl_image_with_srcset($_fields['landing_image']['image']); ?>
         <?php endif; ?>
       </div>
     </div>
