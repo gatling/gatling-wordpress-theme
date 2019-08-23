@@ -1634,30 +1634,6 @@
       div:first-of-type {
         height: 100%;
       }
-
-      @media screen and (min-width: 900px) {
-        &:nth-child(even) {
-          .price-text {
-            color: $primary;
-          }
-
-          ul {
-            background-color: $primary !important;
-          }
-        }
-      }
-
-      @media screen and (max-width: 900px) {
-        &:nth-child(odd) {
-          .price-text {
-            color: $primary;
-          }
-  
-          ul {
-            background-color: $primary !important;
-          }
-        }
-      }
     }
 
     .price-bloc {
@@ -1689,6 +1665,14 @@
 
         &.blue {
           color: $secondary;
+        }
+
+        &.orange {
+          color: $primary;
+        }
+
+        &.purple {
+          color: $purple;
         }
 
         .currency {

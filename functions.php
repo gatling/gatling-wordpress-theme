@@ -2,6 +2,7 @@
 
 // Load includes
 
+require_once get_template_directory() . '/includes/helpers.php';
 require_once get_template_directory() . '/includes/styles.php';
 require_once get_template_directory() . '/includes/scripts.php';
 require_once get_template_directory() . '/includes/templating.php';

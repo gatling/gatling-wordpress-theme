@@ -36,7 +36,11 @@ $gtl_price_comparison_colors = [
     'orange'
   ],
   502 => [ // AWS Marketplace
-
+    'purple',
+    'orange',
+    'orange',
+    'orange',
+    'blue'
   ],
   4662 => [ // On-Premises
     'purple',
