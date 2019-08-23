@@ -22,6 +22,10 @@
     })(window,document,'script','dataLayer','GTM-MJX8KRG');</script>
     <!-- End Google Tag Manager -->
 
+    <!-- Plezi Analytics -->
+    <script type='text/javascript' async src='https://app.plezi.co/scripts/ossleads_analytics.js?tenant=5c14dfd2e317a77267b80dbf&tw=5c14dfd3e317a77267b80ed7'></script>
+    <!-- End Plezi Analytics -->
+
     <?php wp_head(); ?>
   </head>
 
