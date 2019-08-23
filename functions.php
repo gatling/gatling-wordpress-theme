@@ -91,34 +91,6 @@ function wl_get_header() {
 
 add_action('get_header', 'wl_get_header');
 
-// Srcset helper
-
-function gtl_image_with_srcset($image, $default = 'large') {
-  $available_sizes = array('thumbnail', 'medium', 'large');
-
-  $srcset = [];
-  foreach ($available_sizes as &$size) {
-    $link  = $image['sizes'][$size];
-    $width = $image['sizes'][$size.'-width'];
-    array_push($srcset, "$link {$width}w");
-  }
-  unset($size);
-
-  $full_size_link = $image['url'];
-  $full_size_width = $image['width'];
-  array_push($srcset, "$full_size_link {$full_size_width}w");
-
-  $srcset = implode(',', $srcset);
-
-  if ($default === 'full' || !in_array($default, $available_sizes)) {
-    $src = $full_size_link;
-  } else {
-    $src = $image['sizes'][$default];
-  }
-
-  return "<img src=\"$src\" srcset=\"$srcset\" alt=\"{$image['alt']}\">";
-}
-
 // Init WP site
 
 function init_site() {

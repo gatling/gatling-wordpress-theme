@@ -472,12 +472,12 @@
                         <img class="main-icon" src="<?php echo $bloc['icon']; ?>" alt="Icon <?php echo $bloc['title']; ?>">
                         <h3><?php echo $bloc['title']; ?></h3>
                         <p class="subtitle"><?php echo $bloc['subtitle']; ?></p>
-                        <div class="price-text <?php if ($index==0) {echo 'purple';} elseif ($index==1) {echo 'orange';} else {echo 'blue';}?>">
+                        <div class="price-text <?= gtl_price_comparison_color($index) ?>">
                           <span class="info"><?php echo $bloc['abo_infos']['prefixe']; ?></span><span class="currency"><?php echo $bloc['currency']; ?></span><?php echo $bloc['price']; ?><span class="info"><?php echo $bloc['abo_infos']['suffix']; ?></span>
                           <p class="other-price"><?php echo $bloc['other_price']; ?></p>
                         </div>
                         <?php echo $bloc['detail']; ?>
-                        <a class="btn <?php if ($index==0) {echo 'purple';} elseif ($index==1) {echo 'orange';} else {echo 'blue';}?>" href="<?php echo $bloc['button_link']['url']; ?>"><?php echo $bloc['button_link']['title']; ?></a>
+                        <a class="btn <?= gtl_price_comparison_color($index) ?>" href="<?php echo $bloc['button_link']['url']; ?>"><?php echo $bloc['button_link']['title']; ?></a>
                       </div>
                       <?php $index++; ?>
                     <?php endforeach ;?>
