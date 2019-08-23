@@ -2442,8 +2442,10 @@
 // Overrides
 
 [id^=section-] {
-  padding-top: 102px;
-  margin-top: -102px;
+  display: block;
+  position: relative;
+  top: -102px;
+  visibility: hidden;
 }
 
 .page-id-5568 .text-block .btn {
