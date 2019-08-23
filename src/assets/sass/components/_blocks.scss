@@ -2441,7 +2441,7 @@
 
 // Overrides
 
-.page-id-4662 #section-01 {
+[id^=section-] {
   padding-top: 102px;
   margin-top: -102px;
 }

@@ -51,7 +51,7 @@
     $index = 1;
     while(have_rows('flexible_content')) : the_row(); ?>
 
-      <section id="section<?php if ($index < 6) { echo "-0".$index; }?>" class="section<?php if ($index < 6) { echo "-0".$index; } ?>">
+      <section id="section-<?= str_pad($index, 2, "0", STR_PAD_LEFT) ?>" class="section-<?= str_pad($index, 2, "0", STR_PAD_LEFT) ?>">
         <?php get_flexible_block(); ?>
       </section>
 
