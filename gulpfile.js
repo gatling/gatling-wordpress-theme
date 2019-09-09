@@ -43,7 +43,7 @@ var paths = {
     "./node_modules/@fortawesome/fontawesome-free/js/all.js",
     "./node_modules/slick-carousel/slick/slick.js",
     "./node_modules/isotope-layout/dist/isotope.pkgd.min.js",
-    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
+    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js"
   ]
 };
 
@@ -56,7 +56,7 @@ var csspaths = {
     "./node_modules/slick-carousel/slick/slick.css",
     "./node_modules/slick-carousel/slick/slick-theme.css",
     "./node_modules/slick-carousel/slick/ajax-loader.gif",
-    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css",
+    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
   ]
 };
 
@@ -66,7 +66,7 @@ var fontPaths = {
   },
   lib: [
     "./node_modules/slick-carousel/slick/fonts/slick.woff",
-    "./node_modules/slick-carousel/slick/fonts/slick.ttf",
+    "./node_modules/slick-carousel/slick/fonts/slick.ttf"
   ]
 };
 
@@ -136,7 +136,6 @@ gulp.task("style", function() {
       // Reloads browser if main.min.css is enqueued ('browser-sync')
       .pipe(browserSync.stream())
   );
-
 });
 
 // Task: 'js'
