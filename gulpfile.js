@@ -40,6 +40,7 @@ var paths = {
   },
   lib: [
     "./node_modules/jquery/dist/jquery.js",
+    "./node_modules/jquery-validation/dist/jquery.validate.js",
     "./node_modules/@fortawesome/fontawesome-free/js/all.js",
     "./node_modules/slick-carousel/slick/slick.js",
     "./node_modules/isotope-layout/dist/isotope.pkgd.min.js",
