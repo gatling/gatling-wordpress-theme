@@ -8,7 +8,7 @@ host=gatling.io
 destination=$host:gatling/themes/gatling
 
 rm -rf assets
-yarn build
+npm run build
 cp -R vendor assets/css/
 rsync -Pacvz --delete \
   --exclude /.git \

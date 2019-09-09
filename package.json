@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
-    "build": "./node_modules/.bin/gulp build",
-    "js": "./node_modules/.bin/gulp js",
-    "watch": "./node_modules/.bin/gulp watch"
+    "build": "gulp build",
+    "js": "gulp js",
+    "watch": "gulp watch"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
