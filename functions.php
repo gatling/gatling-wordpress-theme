@@ -6,12 +6,7 @@ require_once get_template_directory() . '/includes/helpers.php';
 require_once get_template_directory() . '/includes/styles.php';
 require_once get_template_directory() . '/includes/scripts.php';
 require_once get_template_directory() . '/includes/templating.php';
-
-// ACF Option page
-
-if ( function_exists('acf_add_options_page') ) {
-  acf_add_options_page('Options du thème');
-}
+require_once get_template_directory() . '/includes/acf.php';
 
 // Strip tags and echo field function
 
@@ -49,6 +44,38 @@ $args = array(
 );
 
 register_post_type('user-stories', $args);
+
+//Custom post type RESOURCES
+$labels = array(
+	'name'              => 'Resources',
+	'singular_name'     => 'Resource',
+	'all_items'         => 'All resources',
+	'view_item'         => 'View resource',
+);
+$args = array(
+	'labels'        => $labels,
+	'publicly_queryable' => false,
+	'public'	=> true,
+	'menu_position' => 5,
+	'supports'			=> ['title'],
+);
+
+register_post_type('resources', $args);
+
+//Taxonomy RESOURCES CAT
+$labels = array(
+	'name' =>  'Resources categories',
+	'singular_name' => 'Resources Category',
+	'menu_name' => 'Categories',
+);
+
+register_taxonomy('resources_cat', 'resources', array(
+	'hierarchical' => false,
+	'labels' => $labels,
+  'show_ui' => true,
+  'show_admin_column' => true,
+  'meta_box_cb' => false,
+));
 
 // Post thumbnail
 

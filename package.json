@@ -24,7 +24,9 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "@fortawesome/fontawesome-free": "^5.8.1",
+    "isotope-layout": "^3.0.6",
     "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1"
   }
