@@ -12,6 +12,7 @@
     <div class="container">
         <h1><?php pll_e("Resources"); ?></h1>
 
+        <?php if ($_fields['events']) : ?>
         <section class="section-events">
             <div class="events--header">
                 <h2><?php pll_e("Upcoming events"); ?></h2>
@@ -52,6 +53,7 @@
                 <?php endforeach; endif; ?>
             </div>
         </section>
+        <?php endif; ?>
     </div> <!-- div.container -->
     
     <section class="section-resources">
