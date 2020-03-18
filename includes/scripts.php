@@ -20,7 +20,7 @@ function add_js_scripts() {
     wp_enqueue_script('slick');
 
     // isotope
-    wp_register_script('isotope', get_template_directory_uri().'/assets/js/isotope.pkgd.min.min.js?'.filemtime(get_template_directory().'/assets/js/isotope.pkgd.min.min.js'), array('jquery'), '5.1.4', true);
+    wp_register_script('isotope', get_template_directory_uri().'/assets/js/isotope.pkgd.min.js?'.filemtime(get_template_directory().'/assets/js/isotope.pkgd.min.js'), array('jquery'), '5.1.4', true);
     wp_enqueue_script('isotope');
 
     // fancybox
