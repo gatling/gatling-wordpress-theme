@@ -30,6 +30,9 @@ gulp.task("clean", function() {
   return del("./assets/js/");
 });
 
+/**
+ * VENDOR ASSETS
+ */
 // Add libraries
 var paths = {
   wwwroot: {
@@ -39,7 +42,8 @@ var paths = {
     "./node_modules/jquery/dist/jquery.js",
     "./node_modules/@fortawesome/fontawesome-free/js/all.js",
     "./node_modules/slick-carousel/slick/slick.js",
-    "./node_modules/prismjs/prism.js"
+    "./node_modules/isotope-layout/dist/isotope.pkgd.min.js",
+    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
   ]
 };
 
@@ -51,7 +55,18 @@ var csspaths = {
   lib: [
     "./node_modules/slick-carousel/slick/slick.css",
     "./node_modules/slick-carousel/slick/slick-theme.css",
-    "./node_modules/prismjs/themes/prism-okaidia.css"
+    "./node_modules/slick-carousel/slick/ajax-loader.gif",
+    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css",
+  ]
+};
+
+var fontPaths = {
+  wwwroot: {
+    lib: "./assets/css/vendor/fonts"
+  },
+  lib: [
+    "./node_modules/slick-carousel/slick/fonts/slick.woff",
+    "./node_modules/slick-carousel/slick/fonts/slick.ttf",
   ]
 };
 
@@ -62,6 +77,15 @@ gulp.task("copy-lib", function() {
 gulp.task("copy-lib-css", function() {
   return gulp.src(csspaths.lib).pipe(gulp.dest(csspaths.wwwroot.lib));
 });
+
+gulp.task("copy-fonts", function() {
+  return gulp.src(fontPaths.lib).pipe(gulp.dest(fontPaths.wwwroot.lib));
+});
+
+gulp.task(
+  "vendor",
+  gulp.series("clean", gulp.parallel("copy-lib", "copy-lib-css", "copy-fonts"))
+);
 
 // Task 'style' : Transform SCSS to CSS, Minify CSS, Add Sourcemaps, Correct Line ending
 //============================================================================
@@ -112,6 +136,7 @@ gulp.task("style", function() {
       // Reloads browser if main.min.css is enqueued ('browser-sync')
       .pipe(browserSync.stream())
   );
+
 });
 
 // Task: 'js'
@@ -168,7 +193,7 @@ gulp.task("vendorJS", function() {
   );
 });
 
-gulp.task("js", gulp.series("copy-lib", gulp.parallel("customJS", "vendorJS")));
+gulp.task("js", gulp.parallel("customJS", "vendorJS"));
 
 // TASK 'images' : Minifies PNG, JPEG, GIF and SVG images.
 //============================================================================
@@ -190,7 +215,7 @@ gulp.task("images", function() {
 //==================================================
 gulp.task(
   "build",
-  gulp.series("clean", gulp.parallel("style", "js", "images"))
+  gulp.series("vendor", gulp.parallel("style", "js", "images"))
 );
 
 // TASK Watch : Watch for file during development
