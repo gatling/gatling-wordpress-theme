@@ -20,7 +20,7 @@ function change_post_taxonomy( $post_id ) {
     $stored_cat = wp_get_post_terms($post_id, 'resources_cat');
     
     // get submitted value from acf form by field key
-    $posted_cat = $_POST['acf']['field_5e68b5af60e81'];
+    $posted_cat = $_POST['acf']['field_5e722bd52dfb8'];
     
     // get term_id for the submitted value(s)	  
     $term = get_term_by( 'slug', $posted_cat, 'resources_cat' );
