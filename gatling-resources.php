@@ -116,9 +116,16 @@
                             $url = $_postFields['video']['video_link'];
                         } elseif ($_postFields['video']['video_type'] == 'file') {
                             $url = $_postFields['video']['video_file'];
+                        } elseif ($_postFields['video']['video_type'] == 'form') {
+                            $url = $_postFields['video']['video_form'];
+                        }
+                        if ($_postFields['video']['video_type'] == 'online' || $_postFields['video']['video_type'] == 'file') {
+                            $data = 'data-fancybox';
+                        } else {
+                            $data = '';
                         }
                         ?>
-                        <a data-fancybox href="<?php echo esc_url($url); ?>" class="grid-item videos" style="--color: <?php echo $_postFields['color']; ?>; --img: url('<?php echo $_postFields['video_style']['background_image']['sizes']['medium_large']; ?>')">
+                        <a <?php echo $data ?> href="<?php echo esc_url($url); ?>" class="grid-item videos" style="--color: <?php echo $_postFields['color']; ?>; --img: url('<?php echo $_postFields['video_style']['background_image']['sizes']['medium_large']; ?>')">
                             <div class="item--global">
                                 <div class="category"><?php echo $terms[0]->name; ?></div>
                             </div>
@@ -128,7 +135,6 @@
                             </div>
                             <img class="play" src="<?php add_img_html('play-button.svg'); ?>" alt="">
                         </a>
-           
                     <?php else : ?>
                         <a href="<?php echo esc_url($_postFields['link']); ?>" class="grid-item <?php echo $cat; ?>" <?php if ($_postFields['color']): ?>style="--color: <?php echo $_postFields['color']; ?>"<?php endif; ?>>
                             <div class="item--global">
