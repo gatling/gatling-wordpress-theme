@@ -173,21 +173,16 @@
 
   .circle-1 {
     bottom: 10%;
-    animation: float 8s ease-in-out infinite;
   }
 
   .circle-2 {
     top: 20%;
     left: 15%;
-    animation: float 6s ease-in-out infinite;
-    animation-delay: 0.2s;
   }
 
   .circle-3 {
     bottom: 0;
     left: 25%;
-    animation: float 10s ease-in-out infinite;
-    animation-delay: 0.35s;
   }
 
   .circle-4 {
@@ -195,36 +190,26 @@
     width: 170px;
     left: 40%;
     top: calc(50% - (170px /2));
-    animation: float 12s ease-in-out infinite;
-    animation-delay: 0.2s;
   }
 
   .circle-5 {
     left: 57%;
     top: 5%;
-    animation: float 9s ease-in-out infinite;
-    animation-delay: 0.5s;
   }
 
   .circle-6 {
     bottom: 2.5%;
     left: 62%;
-    animation: float 10s ease-in-out infinite;
-    animation-delay: 0.1s;
   }
 
   .circle-7 {
     top: 5%;
     right: 2%;
-    animation: float 7s ease-in-out infinite;
-    animation-delay: 0.4s;
   }
 
   .circle-8 {
     right: 0;
     bottom: 7%;
-    animation: float 8s ease-in-out infinite;
-    animation-delay: 0.2s;
   }
 }
 
