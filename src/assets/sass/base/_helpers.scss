@@ -27,12 +27,12 @@
   p {
     margin-bottom: 20px;
     line-height: 2.4rem;
-    
+
     &:last-of-type {
       margin-bottom: 0;
     }
   }
-  
+
   ul li::before {
     color: $primary;
     display: inline-block;
@@ -71,9 +71,9 @@
   font-size: 0;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
-    border-color: #10E192;
+    border-color: #10e192;
     border-style: solid;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
@@ -85,9 +85,9 @@
 .icon-minus {
   position: relative;
   font-size: 0;
-  
+
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     background-color: $red;
     border: none;

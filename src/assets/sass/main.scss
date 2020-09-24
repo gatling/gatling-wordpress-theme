@@ -1,35 +1,30 @@
 @charset 'UTF-8';
 
 // 1. Configuration and helpers
-@import
-  'abstracts/variables',
-  'abstracts/mixins';
-
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
 // Vendors
 
 // 2. Base stuff
-@import
-  'base/reset',
-  'base/base',
-  'base/helpers';
+@import "base/reset";
+@import "base/base";
+@import "base/helpers";
 
 // 5. Components
-@import
-  'components/footer',
-  'components/form',
-  'components/header',
-  'components/blocks',
-  'components/external',
-  'components/inputs',
-  'components/buttons',
-  'components/admin',
-  'components/prismatic';
+@import "components/footer";
+@import "components/form";
+@import "components/header";
+@import "components/blocks";
+@import "components/external";
+@import "components/inputs";
+@import "components/buttons";
+@import "components/admin";
+@import "components/prismatic";
 
 // 6. Page-specific styles
-@import
-  'pages/default',
-  'pages/home',
-  'pages/user-stories',
-  'pages/resources',
-  'pages/blog';
+@import "pages/default";
+@import "pages/home";
+@import "pages/user-stories";
+@import "pages/resources";
+@import "pages/blog";

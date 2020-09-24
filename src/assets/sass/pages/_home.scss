@@ -4,13 +4,13 @@
       font-size: 5.6rem;
     }
   }
-  
+
   .landing-screen {
     @media screen and (max-width: 950px) {
       .landing--text {
         width: 100%;
       }
-      
+
       .landing--screenshot {
         display: none;
       }
@@ -20,7 +20,7 @@
   .icon-block-ct {
     padding-top: 120px;
     padding-bottom: 180px;
-  
+
     @media screen and (max-width: 950px) {
       padding-top: 60px;
       padding-bottom: 60px;

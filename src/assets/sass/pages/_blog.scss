@@ -1,6 +1,6 @@
 .blog {
   .main-header {
-    background-image: url('../img/testimonial-bg.png');
+    background-image: url("../img/testimonial-bg.png");
     padding: 100px 0;
 
     @include background(cover, center, no-repeat);
@@ -89,7 +89,7 @@
         flex-direction: column;
         margin-bottom: 50px;
         border-radius: 8px;
-        box-shadow: 0 10px 40px 0 rgba(176,196,220,0.37);
+        box-shadow: 0 10px 40px 0 rgba(176, 196, 220, 0.37);
 
         &:last-child {
           margin-bottom: 0;
@@ -113,16 +113,16 @@
             margin-left: 0;
             margin-right: 0;
             padding-left: 40px;
-          
+
             li {
               margin-bottom: 10px;
               line-height: 2.4rem;
-          
+
               &:last-child {
                 margin-bottom: 0;
               }
             }
-        
+
             li::before {
               display: none;
             }
@@ -242,7 +242,9 @@
       max-width: 100%;
     }
 
-    iframe, embed, object {
+    iframe,
+    embed,
+    object {
       max-width: 100%;
     }
 

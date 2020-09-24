@@ -38,7 +38,7 @@
                 ?>
 
                 <?php if ($_fields['events']) : foreach ($_fields['events'] as $event) : ?>
-                    <a href="<?php echo $event['link']; ?>" class="events--slide">
+                    <a href="<?php echo $event['link']['url']; ?>" class="events--slide">
                         <div class="main-img">
                             <img src="<?php echo $event['image']['sizes']['medium']; ?>" alt="">
                             <div class="events--date">
@@ -59,12 +59,13 @@
     <section class="section-resources">
         <div class="container">
             <?php 
-                $loop = new WP_Query( array( 
-                    'post_type' => 'resources', 
+                $loop = new WP_Query(array(
+                    'post_type' => 'resources',
                     'posts_per_page' => '-1',
-                    'orderby' => 'title',
-                    'order' => 'ASC' ) 
-                );
+                    'meta_key' => 'date',
+                    'orderby' => 'meta_value_num',
+                    'order' => 'DESC'
+                ));
 
                 $terms = get_terms(array(
                     'taxonomy'      => 'resources_cat',
@@ -97,7 +98,7 @@
                     <button class="search-btn">
                         <img src="<?php add_img_html('search-icon.svg'); ?>" alt="">
                     </button>
-                    <input class="search-input" type="text" id="search" placeholder="<?php pll_e("Search Webinars, videos..."); ?>" />
+                    <input class="search-input active" type="text" id="search" placeholder="<?php pll_e("Search webinars, videos..."); ?>" />
                 </div>
             </div>
 
@@ -130,35 +131,36 @@
                                 <div class="category"><?php echo $terms[0]->name; ?></div>
                             </div>
                             <div class="item--details <?php echo $_postFields['video_style']['text_color']; ?>">
-                                <p class="reference"><?php echo $_postFields['reference']; ?></p>
                                 <div class="title"><?php echo $_postFields['title']; ?></div>
                             </div>
                             <img class="play" src="<?php add_img_html('play-button.svg'); ?>" alt="">
                         </a>
                     <?php else : ?>
-                        <a href="<?php echo esc_url($_postFields['link']); ?>" class="grid-item <?php echo $cat; ?>" <?php if ($_postFields['color']): ?>style="--color: <?php echo $_postFields['color']; ?>"<?php endif; ?>>
+                        <a href="<?php echo esc_url($_postFields['link']); ?>" class="grid-item <?php echo $cat; ?>" style="--img: url('<?php echo $_postFields['picture']['sizes']['medium_large'] ?>')<?php if ($_postFields['color']): ?>; --color: <?php echo $_postFields['color']; ?><?php endif; ?>">
                             <div class="item--global">
-                                <div class="category"><?php echo $terms[0]->name; ?></div>
-                                <?php if ($cat == 'webinar') : ?>
+                                <div class="category"><?php if ($post->post_title !== '') { echo $post->post_title; } else { echo $terms[0]->name; } ?></div>
+                                <?php if ($cat == 'webinars') : ?>
                                     <div class="webinar-speaker">
-                                        <img src="<?php echo $_postFields['picture']['sizes']['thumbnail']; ?>" alt="<?php echo esc_attr($_postFields['speaker']['name']); ?>">
+                                        <img src="<?php echo $_postFields['speaker']['picture']['sizes']['thumbnail']; ?>" alt="<?php echo esc_attr($_postFields['speaker']['name']); ?>">
                                         <p class="name"><?php echo $_postFields['speaker']['name']; ?></p>
                                         <p class="title"><?php echo $_postFields['speaker']['title']; ?></p>
                                         <p class="location"><?php echo $_postFields['speaker']['company']; ?></p>
                                     </div>
-                                <?php elseif ($cat == 'white-papers') : ?>
-                                    <img src="<?php echo $_postFields['picture']['sizes']['thumbnail']; ?>" alt="">
                                 <?php endif; ?>
                             </div>
                             <div class="item--details">
-                                <div>
-                                    <p class="reference"><?php echo $_postFields['reference']; ?></p>
-                                    <div class="title"><?php echo $_postFields['title']; ?></div>
-                                </div>
+                                <div class="title"><?php echo $_postFields['title']; ?></div>
                                 <div class="button-ct">
                                     <p class="date"><?php echo $_postFields['date']; ?></p>
                                     <button class="btn btn-primary">
-                                        <?php ($cat == 'webinar' ? pll_e('Register now!') : pll_e('Read more')) ;?>
+                                        <?php if ($cat == 'webinars') {
+                                            $date = strtotime($_postFields['date']);
+                                            if ($date <= time()) {
+                                                pll_e('Watch now!');
+                                            } else {
+                                                pll_e('Register now!');
+                                            }
+                                        } else { pll_e('Read more'); } ?>
                                     </button>
                                 </div>
                             </div>

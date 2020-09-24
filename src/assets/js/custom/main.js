@@ -1,31 +1,27 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // MENU
-  $(".navicon-button").click(function() {
+  $(".navicon-button").click(function () {
     $(this).toggleClass("open");
     $(".main-menu").toggleClass("active");
   });
 
-  $(".submenu-li").mouseenter(function() {
-    $(this)
-      .find(".submenu")
-      .addClass("visible");
+  $(".submenu-li").mouseenter(function () {
+    $(this).find(".submenu").addClass("visible");
   });
 
-  $(".submenu").mouseleave(function() {
+  $(".submenu").mouseleave(function () {
     $(this).removeClass("visible");
   });
 
-  $(window).click(function(e) {
-    var activeClass = $(e.target)
-      .parent()
-      .attr("class");
+  $(window).click(function (e) {
+    var activeClass = $(e.target).parent().attr("class");
     if (activeClass !== "submenu-li") {
       $(".submenu").removeClass("visible");
     }
   });
 
   //DROPDOWN OPEN-SOURCE
-  $(".tool-instruction .title").click(function() {
+  $(".tool-instruction .title").click(function () {
     $(this)
       .closest(".tool-instruction")
       .find(".instruction--content")
@@ -34,7 +30,7 @@ $(document).ready(function() {
   });
 
   //TABLE TABS (MOBILE)
-  $(".solution-btn").click(function() {
+  $(".solution-btn").click(function () {
     $(".solution-btn").removeClass("active");
     $(this).toggleClass("active");
     var solution = $(this).attr("data-solution");
@@ -54,7 +50,7 @@ $(document).ready(function() {
     dots: true,
     focusOnSelect: true,
     variableWidth: true,
-    arrows: false
+    arrows: false,
   });
 
   $(".press-slick").slick({
@@ -67,9 +63,9 @@ $(document).ready(function() {
     responsive: [
       {
         breakpoint: 1000,
-        settings: "unslick"
-      }
-    ]
+        settings: "unslick",
+      },
+    ],
   });
 
   $(".advantages-slick").slick({
@@ -83,8 +79,8 @@ $(document).ready(function() {
           slidesToScroll: 2,
           autoplay: true,
           autoplaySpeed: 3000,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 870,
@@ -93,10 +89,10 @@ $(document).ready(function() {
           slidesToScroll: 1,
           autoplay: true,
           autoplaySpeed: 3000,
-          dots: true
-        }
-      }
-    ]
+          dots: true,
+        },
+      },
+    ],
   });
 
   $(".timeline-slick").slick({
@@ -109,8 +105,8 @@ $(document).ready(function() {
           slidesToShow: 3,
           slidesToScroll: 2,
           dots: true,
-          infinite: false
-        }
+          infinite: false,
+        },
       },
       {
         breakpoint: 600,
@@ -119,10 +115,10 @@ $(document).ready(function() {
           dots: true,
           infinite: false,
           focusOnSelect: true,
-          variableWidth: true
-        }
-      }
-    ]
+          variableWidth: true,
+        },
+      },
+    ],
   });
 
   $(".team-slick").slick({
@@ -136,10 +132,10 @@ $(document).ready(function() {
         settings: {
           slidesToShow: 1,
           variableWidth: true,
-          focusOnSelect: true
-        }
-      }
-    ]
+          focusOnSelect: true,
+        },
+      },
+    ],
   });
 
   $(".resources-slick").slick({
@@ -152,10 +148,10 @@ $(document).ready(function() {
         settings: {
           slidesToShow: 1,
           infinite: true,
-          focusOnSelect: true
-        }
-      }
-    ]
+          focusOnSelect: true,
+        },
+      },
+    ],
   });
 
   $(".price-slick").slick({
@@ -167,10 +163,10 @@ $(document).ready(function() {
         settings: {
           arrows: false,
           dots: true,
-          slidesToShow: 1
-        }
-      }
-    ]
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   $(".price-slick-2").slick({
@@ -181,10 +177,10 @@ $(document).ready(function() {
         breakpoint: 900,
         settings: {
           slidesToShow: 1,
-          dots: true
-        }
-      }
-    ]
+          dots: true,
+        },
+      },
+    ],
   });
 
   $(".price-slick-5").slick({
@@ -195,23 +191,23 @@ $(document).ready(function() {
         breakpoint: 900,
         settings: {
           slidesToShow: 1,
-          dots: true
-        }
-      }
-    ]
+          dots: true,
+        },
+      },
+    ],
   });
 
   $(".sessions-slick").slick({
     slidesToShow: 1,
     infinite: false,
     dots: true,
-    arrows: false
+    arrows: false,
   });
 
   $(".tiles-slick").slick({
     slidesToShow: 1,
     dots: true,
-    arrows: false
+    arrows: false,
   });
 
   var scrollx = 950 - $(window).width();

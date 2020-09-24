@@ -8,7 +8,7 @@
     font-size: 5rem;
     font-weight: bold;
 
-    @include mq('phablet', 'max') {
+    @include mq("phablet", "max") {
       text-align: center;
       padding-top: 60px;
       font-size: 4.2rem;
@@ -45,7 +45,7 @@
           width: 55px;
           background: $white;
           border: none;
-          box-shadow: 0px 0px 20px 0 rgba(176,196,220,0.5);
+          box-shadow: 0px 0px 20px 0 rgba(176, 196, 220, 0.5);
           cursor: pointer;
           transition: all 0.3s;
 
@@ -62,8 +62,8 @@
     }
 
     .slider-events {
-      & > .slick-list > .slick-track {    
-        margin-left:0;
+      & > .slick-list > .slick-track {
+        margin-left: 0;
       }
 
       .slick-slide {
@@ -119,7 +119,7 @@
       }
     }
 
-    @include mq('phablet', 'max') {
+    @include mq("phablet", "max") {
       margin-top: 0;
 
       .events--header {
@@ -144,16 +144,17 @@
   }
 
   .section-resources {
-    background-image: url('../img/strip-patterns-01.svg'), linear-gradient(to bottom, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
+    background-image: url("../img/strip-patterns-01.svg"),
+      linear-gradient(to bottom, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
     margin-bottom: -200px;
 
     @include background(contain, center, repeat);
 
     &::before {
       display: block;
-      content: '';
+      content: "";
       height: 200px;
-      background-image: -webkit-linear-gradient(-85deg, #FFF 55%, #F5F7FC 55%);
+      background-image: -webkit-linear-gradient(-85deg, #fff 55%, #f5f7fc 55%);
     }
 
     .container {
@@ -172,19 +173,19 @@
         button {
           font-size: 1.6rem;
           padding: 0 30px;
-  
+
           &.active {
             font-weight: 500;
-            
+
             &::after {
               display: block;
-              content: '';
+              content: "";
               margin-top: 10px;
               height: 5px;
               width: 30px;
               border-radius: 2px;
               background-color: $primary;
-  
+
               @include push--auto;
             }
           }
@@ -244,7 +245,7 @@
           margin-right: 14px;
           z-index: 999;
         }
-  
+
         input.search-input {
           box-shadow: 0 5px 20px 0 rgba(192, 208, 228, 0.54);
           border-radius: 8px;
@@ -258,13 +259,13 @@
           transition: all 0.5s;
           pointer-events: none;
           font-size: 1.6rem;
-          
+
           &.active {
-            max-width: 460px;
+            max-width: 380px;
             pointer-events: all;
             opacity: 1;
           }
-          
+
           &::placeholder {
             opacity: 0.5;
           }
@@ -289,7 +290,7 @@
           clip-path: polygon(0 65%, 100% 50%, 100% 100%, 0% 100%);
           border-radius: 0 0 8px 8px;
           display: block;
-          content: '';
+          content: "";
           background: var(--color, $black);
           position: absolute;
           height: 100%;
@@ -321,7 +322,7 @@
             text-align: center;
             color: $white;
             padding: 5px 10px;
-            min-width: 80px;
+            min-width: 100px;
           }
         }
 
@@ -336,7 +337,8 @@
           }
         }
 
-        &.webinar,
+        &.use-cases,
+        &.webinars,
         &.white-papers {
           .item--details {
             display: flex;
@@ -350,12 +352,12 @@
 
             .title p {
               font-size: 2.2rem;
+              font-weight: normal;
               line-height: 2.5rem;
-              color: $grey-main;
+              // color: $;
 
               strong {
-                color: $primary;
-                font-weight: 600;
+                font-weight: bold;
               }
             }
 
@@ -363,7 +365,7 @@
               display: flex;
               flex-direction: column;
               align-items: center;
-                       
+
               .date {
                 font-size: 1.1rem;
               }
@@ -379,14 +381,14 @@
           }
         }
 
-        &.webinar {
+        &.webinars {
           .webinar-speaker {
             text-align: center;
-  
+
             p {
               line-height: 1.4rem;
             }
-  
+
             img {
               height: 80px;
               width: 80px;
@@ -395,37 +397,27 @@
               border: 0.5px solid $white;
               margin-bottom: 5px;
             }
-  
+
             .name {
               text-transform: uppercase;
               font-size: 1rem;
               font-weight: 600;
             }
-  
+
             .title {
               font-size: 1.1rem;
             }
-  
+
             .location {
               font-size: 0.9rem;
             }
           }
         }
 
+        &.use-cases,
+        &.videos,
+        &.webinars,
         &.white-papers {
-          .item--global {
-            img {
-              width: 85px;
-              height: 125px;
-              object-fit: cover;
-              box-shadow: -9px 2px 16px -5px rgba(0, 0, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-              border-radius: 4px;
-              margin-bottom: 10px;
-            }
-          }
-        }
-
-        &.videos {
           background-size: cover;
           background-position: center;
           background-image: var(--img);
@@ -461,7 +453,11 @@
             .title p {
               font-size: 2.2rem;
               line-height: 2.5rem;
-              font-weight: 600;
+
+              strong {
+                color: $white;
+                font-weight: bold;
+              }
             }
           }
 
@@ -478,7 +474,7 @@
       }
     }
 
-    @include mq('desktop', 'max') {
+    @include mq("desktop", "max") {
       .resources-grid {
         .grid-item {
           width: calc(50% - 20px);
@@ -486,7 +482,7 @@
       }
     }
 
-    @include mq('tablet', 'max') {
+    @include mq("tablet", "max") {
       .resources-grid {
         .grid-item {
           width: 100%;

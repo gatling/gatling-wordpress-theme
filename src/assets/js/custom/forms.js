@@ -20,14 +20,14 @@ function pleziForm(contentWebFormId, formId) {
   var form = document.getElementById("foss-" + contentWebFormId);
   if (form != undefined && form !== null) {
     $(form).validate();
-    form.onsubmit = function(event) {
+    form.onsubmit = function (event) {
       event.preventDefault();
       if (!$(form).valid()) {
         return;
       }
 
       var xhttp = new XMLHttpRequest();
-      xhttp.addEventListener("load", function() {
+      xhttp.addEventListener("load", function () {
         if (this.readyState == 4 && this.status == 200) {
           var json = JSON.parse(this.responseText);
           if (
@@ -61,4 +61,4 @@ function pleziForm(contentWebFormId, formId) {
   }
 }
 
-pleziForm("5d52c938e317a71d565409aa", "5d5188d4f420874ad39371d6");
+// pleziForm("5d52c938e317a71d565409aa", "5d5188d4f420874ad39371d6");

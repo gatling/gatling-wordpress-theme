@@ -23,14 +23,14 @@
 
   .quote {
     color: $white;
-    background-image: url('../img/testimonial-bg.png');
+    background-image: url("../img/testimonial-bg.png");
     border-radius: 8px;
-    box-shadow: 0 4px 15px 0 rgba(7,42,68,0.1);
+    box-shadow: 0 4px 15px 0 rgba(7, 42, 68, 0.1);
     padding: 40px 30px;
     width: 60%;
     margin-bottom: 60px;
     text-align: center;
-    
+
     @include push--auto;
     @include background(cover, center, no-repeat);
 
@@ -73,7 +73,7 @@
       margin-bottom: 20px;
       max-width: 200px;
       width: 80%;
-      
+
       @include push--auto;
     }
   }
@@ -81,7 +81,7 @@
   .text {
     width: 70%;
     padding-bottom: 50px;
-    
+
     @include push--auto;
 
     @media screen and (max-width: 1100px) {
@@ -101,7 +101,7 @@
     align-items: center;
     border-bottom: 1px solid #ccc;
     width: 90%;
-   
+
     @include push--auto;
 
     &:last-child {

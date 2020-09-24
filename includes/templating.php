@@ -321,6 +321,25 @@
           </div>
         <?php break;
 
+        case 'external_links' : ?>
+          <div class="external-link-block">
+            <div class="container">
+              <h2 class="h2"><?php strip_the_field(get_sub_field('title'),'<strong>'); ?></h2>
+              <div class="two-columns--text" style="display:flex">
+                <?php foreach (get_sub_field('blocks') as $block) : ?>
+                  <div class="column" style="flex:1">
+                    <img class="external--img" src="<?= $block['image']['sizes']['medium']; ?>" alt="<?= $block['title']; ?>" style="height:100px;width:auto">
+                    <h3><?= $block['title']; ?></h3>
+                    <?= $block['text']; ?>
+                    <?php $link = $block['link_button']; ?>
+                    <a href="<?php echo $link['url']; ?>" target="_blank" class="btn purple"><?php echo $link['title']; ?></a>
+                  </div>
+                <?php endforeach; ?>
+              </div>
+            </div>
+          </div>
+        <?php break;
+
         case 'references_block' : ?>
           <div class="references-block">
             <div class="container">

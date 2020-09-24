@@ -45,7 +45,7 @@
 
     label.checkbox {
       color: $white !important;
-      font-family: 'Montserrat', sans-serif !important;
+      font-family: "Montserrat", sans-serif !important;
 
       span {
         position: relative;
@@ -54,14 +54,14 @@
     }
   }
 
-  input[type=email] {
+  input[type="email"] {
     color: $white !important;
     font-size: 1.4rem !important;
     background-color: rgba(255, 255, 255, 0.2) !important;
     border: none !important;
     border-radius: 4px 0 0 4px !important;
     padding: 12.5px 20px !important;
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: "Montserrat", sans-serif !important;
     width: 70% !important;
     height: 37px !important;
 
@@ -75,9 +75,9 @@
     }
   }
 
-  input[type=submit] {
+  input[type="submit"] {
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: $white !important;
     border: none;
     color: $secondary !important;

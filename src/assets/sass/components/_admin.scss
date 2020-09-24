@@ -1,18 +1,18 @@
 #wpadminbar {
   top: auto;
-  bottom: 0
+  bottom: 0;
 }
 
 @media screen and (max-width: 600px) {
   #wpadminbar {
-    position: fixed
+    position: fixed;
   }
 }
 
 #wpadminbar {
   .menupop .ab-sub-wrapper,
   .shortlink-input {
-    bottom: 32px
+    bottom: 32px;
   }
 }
 
@@ -20,13 +20,13 @@
   #wpadminbar {
     .menupop .ab-sub-wrapper,
     .shortlink-input {
-      bottom: 46px
+      bottom: 46px;
     }
   }
 }
 
 @media screen and (min-width: 783px) {
   .admin-bar.masthead-fixed .site-header {
-    top: 0
+    top: 0;
   }
 }
