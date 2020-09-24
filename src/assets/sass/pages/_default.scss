@@ -1,6 +1,6 @@
 .default-template {
   padding-top: 0;
-  
+
   h1 {
     font-size: 7.6rem;
     line-height: 8rem;
@@ -19,15 +19,15 @@
   .landing-screen {
     padding-top: 120px;
     padding-bottom: 150px;
-    background-color: #013A6B;
-    background-image: -webkit-linear-gradient(-80deg, #FFF 55%, #F0F5FB 55%);
+    background-color: #013a6b;
+    background-image: -webkit-linear-gradient(-80deg, #fff 55%, #f0f5fb 55%);
     overflow: hidden;
 
     .landing--text,
     .landing--screenshot {
       width: 50%;
     }
-    
+
     @media screen and (max-width: 1300px) {
       .landing--text {
         width: 70%;
@@ -37,7 +37,7 @@
         width: 30%;
       }
     }
-    
+
     @media screen and (max-width: 1150px) {
       padding-top: 130px;
     }
@@ -66,7 +66,7 @@
       left: 50%;
       border-radius: 8px 0 0 8px;
       margin-bottom: 25px;
-      box-shadow: 10px 10px 20px 0 rgba(176,196,220,0.33);
+      box-shadow: 10px 10px 20px 0 rgba(176, 196, 220, 0.33);
 
       &.image-only {
         border-radius: 0;
@@ -182,24 +182,39 @@
 
   .section-01 {
     background-color: $background;
-    background-image: url('../img/strip-patterns-01.svg');
-    
+    background-image: url("../img/strip-patterns-01.svg");
+
     @include background(contain, center, repeat);
   }
 
   .section-02 {
     //Gradient background
     background-color: $background;
-    background-image: linear-gradient(to bottom, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
+    background-image: linear-gradient(
+      to bottom,
+      #f0f5fb,
+      #f5f7fc,
+      #f9fafd,
+      #fcfcfe,
+      #ffffff
+    );
   }
 
   .section-04 {
-    background-image: url('../img/strip-patterns-02.svg'), linear-gradient(to top, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
+    background-image: url("../img/strip-patterns-02.svg"),
+      linear-gradient(to top, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
 
     @include background(contain, center, repeat);
   }
 
   .section-05 {
-    background-image: linear-gradient(to bottom, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
+    background-image: linear-gradient(
+      to bottom,
+      #f0f5fb,
+      #f5f7fc,
+      #f9fafd,
+      #fcfcfe,
+      #ffffff
+    );
   }
 }
