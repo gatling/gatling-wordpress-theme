@@ -1,23 +1,18 @@
 $(document).ready(function () {
   // MENU
   $(".navicon-button").click(function () {
-    $(this).toggleClass("open");
     $(".main-menu").toggleClass("active");
+    $('.mask-menu').toggleClass("active");
   });
 
-  $(".submenu-li").mouseenter(function () {
-    $(this).find(".submenu").addClass("visible");
+  $(".close-menu").click(function () {
+    $(".main-menu").removeClass("active");
+    $('.mask-menu').removeClass("active");
   });
 
-  $(".submenu").mouseleave(function () {
-    $(this).removeClass("visible");
-  });
-
-  $(window).click(function (e) {
-    var activeClass = $(e.target).parent().attr("class");
-    if (activeClass !== "submenu-li") {
-      $(".submenu").removeClass("visible");
-    }
+  $('.mask-menu').click(function () {
+    $(".main-menu").removeClass("active");
+    $('.mask-menu').removeClass("active");
   });
 
   //DROPDOWN OPEN-SOURCE
