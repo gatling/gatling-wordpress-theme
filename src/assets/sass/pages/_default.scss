@@ -23,6 +23,19 @@
     background-image: -webkit-linear-gradient(-80deg, #fff 55%, #f0f5fb 55%);
     overflow: hidden;
 
+    &.-small {
+      .landing--text {
+        width: 100%;
+        text-align: center;
+        h1 {
+          font-size: 6.6rem;
+        }
+        p {
+          font-size: 2.2rem;
+        }
+      }
+    }
+
     .landing--text,
     .landing--screenshot {
       width: 50%;

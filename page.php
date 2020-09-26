@@ -4,7 +4,8 @@
 ?>
 
 <main class="default-template">
-  <section class="landing-screen">
+  <section class="landing-screen
+  <?php if (get_field('small_top_screen')) echo '-small'; ?>">
     <div class="container">
       <div class="landing--text">
         <h1 class="text-<?php echo $_fields['title_color']; ?>">
