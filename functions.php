@@ -108,8 +108,6 @@ function my_get_menu($location) {
     }
   }
 
-  
-  echo '<pre>'; print_r($menu_ordered); echo '</pre>';
 
   return $menu_ordered;
 }

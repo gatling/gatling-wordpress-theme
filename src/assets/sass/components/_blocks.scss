@@ -355,6 +355,43 @@
   }
 }
 
+.block-icons-values {
+
+  .features--img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .features--number {
+    
+    display: flex;
+
+    img {
+      margin-right: 20px;
+    }
+
+    .value {
+      font-size: 6.6rem;
+      line-height: 10rem;
+    }
+
+    .unit {
+      font-size: 2.2rem;
+      line-height: 4rem;
+    }
+  }
+
+  .link {
+    margin-top: 50px;
+    display: block;
+
+    .arrow-char {
+      margin-left: 10px;
+    }
+  }
+}
+
 // Screenshots block
 
 .screenshots-block {
@@ -2394,39 +2431,237 @@
 
 .newsletter {
   background-color: $secondary;
+  background-image: url(../img/background-newsletter.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: $white;
 
   .container {
-    padding: 70px 0 !important;
+    padding: 30px 0 !important;
+    color: $white;
   }
 
   .h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
     color: $white;
-    font-size: 3rem;
-    font-weight: 600;
-
-    @media screen and (max-width: 880px) {
-      padding-bottom: 10px;
-      text-align: center;
-    }
   }
 
   .header--text {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 600;;
+  }
 
-    @media screen and (max-width: 880px) {
-      text-align: center;
-      margin-bottom: 40px;
+  .text {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+}
+
+.simple-block {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+
+  .block-content {
+    flex-grow: 1;
+
+    h2, h4 {
+      color: #1D262C;
+    }
+
+    h2 {
+      font-size: 3.3rem;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+
+    .text {
+      color: #748793;
+    }
+
+    .btn {
+      margin-top: 50px;
     }
   }
 
-  .container {
-    display: flex;
-    justify-content: space-between;
+  .image-content {
+    margin-left: 60px;
+    width: 680px;
+    flex-shrink: 0;
 
-    @media screen and (max-width: 880px) {
-      flex-direction: column;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &.-inversed {
+
+    .block-content {
+      order: 2;
+    }
+
+    .image-content {
+      order: 1;
+      margin-left: 0;
+      margin-right: 60px;
+    }
+  }
+}
+
+.testimonials-block {
+  padding: 100px 0;
+  .h2 {
+    font-size: 3.3rem;
+    margin-bottom: 60px;
+  }
+
+  .testimonial {
+    margin-bottom: 20px;
+    background: white;
+    box-shadow: 0 12px 15px #ecefff;
+    padding: 30px;
+    position: relative;
+
+    .content {
+      display: flex;
       align-items: center;
+
+      .testi_img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-right: 30px;
+      }
+
+      .testimonial-content {
+        .text {
+          color: $secondary-2;
+          font-size: 2.2rem;
+          margin-bottom: 20px;
+        }
+
+        .bottom-testimonial {
+          text-transform: uppercase;
+          color: #748793;
+          font-size: 1.3rem;
+
+          .author {
+            color: #1d262C;
+          }
+        }
+        
+      }
+    }
+
+    .readmore-btn {
+      bottom: 30px;
+      right: 30px;
+      background: $purple;
+    }
+    
+  }
+}
+
+.useful-resources-block {
+  padding: 50px 0 0 50px;
+
+  .useful-resources-content {
+    display: flex;
+    flex-direction: column;
+
+    &.-inversed {
+      .resources-grid {
+        order: 2;
+      }
+      .gatling-academy {
+        order: 1;
+      }
+    }
+  }
+
+
+  .h2 {
+    font-size: 3.3rem;
+    margin-bottom: 60px;
+  }
+
+  .link {
+    display: block;
+    margin-top: 60px;
+    order: 3;
+  }
+
+  .resources-grid {
+    order: 1;
+  }
+
+  .gatling-academy {
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 12px 15px #ecefff;
+    border-radius: 20px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 30px;
+    position: relative;
+    order: 2;
+
+    .title {
+      font-size: 2.2rem;
+      color: #748793;
+      margin-bottom: 15px;
+
+      strong {
+        font-weight: 600;
+        color: $primary;
+      }
+    }
+
+    .text {
+      font-size: 1.3rem;
+      color: #748793;
+    }
+
+    .badge {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      border-radius: 12px;
+      background: rgba(255, 158, 43, 0.25);
+      color: $primary;
+      padding: 6px 20px;
+      font-size: 1.1rem;
+    }
+
+    .icon {
+      padding: 15px;
+      background: white;
+      box-shadow: 4px 2px 24px rgba(87, 87, 87, 0.2);
+      border-radius: 18px;
+      margin-top: 30px;
+      display: inline-block;
+
+      img {
+        width: 145px;
+      }
+    }
+
+    .btn {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
     }
   }
 }
