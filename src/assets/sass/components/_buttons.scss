@@ -6,6 +6,7 @@
   padding: 20px 35px;
   display: inline-block;
   position: relative;
+  border: 2px solid transparent;
 
   &.btn-icon {
     position: relative;
@@ -28,6 +29,12 @@
 
   &.purple {
     background-color: $secondary-2;
+  }
+
+  &.white {
+    background-color: white;
+    color: $primary;
+    border-color: $primary;
   }
 }
 
