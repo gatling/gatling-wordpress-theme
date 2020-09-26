@@ -49,6 +49,24 @@ h3 {
 .h2-bar {
   padding-bottom: 30px;
 
+  &.-purple {
+    &::before {
+      background-color: $purple;
+    }    
+  }
+
+  &.-orange {
+    &::before {
+      background-color: $primary;
+    }    
+  }
+
+  &.-blue {
+    &::before {
+      background-color: $secondary;
+    }    
+  }
+
   &::before {
     width: 6px;
     height: 2.7rem;

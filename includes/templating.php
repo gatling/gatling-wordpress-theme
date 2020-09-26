@@ -485,7 +485,9 @@
         case "text-with-image" : ?>
 <div class="text-with-image">
   <div class="container">
-    <h2 class="h2"><?php the_sub_field('title'); ?></h2>
+    <h2 class="h2
+    <?php if (get_sub_field('bar_on_title')) echo 'h2-bar -'.get_sub_field('bar_color'); ?>
+    "><?php the_sub_field('title'); ?></h2>
     <div class="text-ct">
       <div class="text">
         <?php the_sub_field('text'); ?>
@@ -709,8 +711,8 @@
 
         case 'table_comparison_block' : ?>
 <div class="container table-comparison-block">
-  <h2 class="h2 h2-bar"><?php the_sub_field('title'); ?></h2>
-  <p class="subtitle"><?php the_sub_field('subtitle'); ?></p>
+  <h2 class="h2 text-center"><?php the_sub_field('title'); ?></h2>
+  <p class="subtitle text-center"><?php the_sub_field('subtitle'); ?></p>
   <div class="button-ct">
     <button class="solution-btn clean-btn active" data-solution="solution-1"><img
         src="<?php the_sub_field('solution_1'); ?>" alt="Load Testing"></button>
@@ -776,16 +778,32 @@
 <div class="container simple-block
           <?php if (get_sub_field('image_position') == 'left') echo '-inversed'; ?>">
   <div class="block-content">
-    <h2 class="h2"><?php the_sub_field('title'); ?>
+    <?php if (get_sub_field('icon')): 
+      $image = get_sub_field('icon');?>
+      <img src="<?php echo $image['url']; ?>" alt="" class="icon">      
+    <?php endif; ?>
+    <h2 class="h2"><?php the_sub_field('title'); ?></h2>
+        <?php if (get_field('subtitle')): ?>
       <h4><?php the_sub_field('subtitle'); ?></h4>
-
+        <?php endif; ?>
       <div class="text">
         <?php the_sub_field('text'); ?>
       </div>
 
-      <?php $link = get_sub_field('cta'); ?>
+      <?php 
+      if (get_sub_field('cta')):
+      $link = get_sub_field('cta'); ?>
       <a href="<?php echo $link['url']; ?>"
         class="btn <?php the_sub_field('cta_color'); ?>"><?php echo $link['title']; ?></a>
+      <?php endif; ?>
+
+      <?php 
+      if (get_sub_field('link')):
+      $link = get_sub_field('link'); ?>
+      <a href="<?php echo $link['url']; ?>"
+        class="link mobile-link"><?php echo $link['title']; ?><span
+      class="arrow-char">→</span></a>
+      <?php endif; ?>
   </div>
   <div class="image-content">
     <?php $img = get_sub_field('image'); ?>
@@ -836,25 +854,46 @@
 
 case 'useful_resources' : ?>
 <div class="useful-resources-block container">
+  <?php if (get_field('title')): ?>
   <h2 class="text-center h2"><?php the_sub_field('title'); ?></h2>
+  <?php endif; ?>
 
-  <div class="useful-resources-content
-  <?php if (get_sub_field('academy_position') == 'before') echo '-inversed'; ?>
-    
-    ">
-    <div class="resources-grid">
-      <?php 
+  <?php if (get_sub_field('show_see_more')): 
+    $see_more = get_sub_field('see_more'); ?>
+  <div class="see-more text-center">
+    <div class="text"><?php echo $see_more['text']; ?></div>
+    <a class="btn <?php echo $see_more['cta_color']; ?>"
+      href="<?php echo $see_more["cta"]["url"]; ?>"><?php echo $see_more["cta"]["title"]; ?></a>
+  </div>
+  <?php endif; ?>
+
+  <?php if (get_sub_field('show_academy')): ?>
+  <?php $academy = get_sub_field('gatling_academy'); ?>
+  <div class="gatling-academy" style="background-image:url(<?php echo $academy['background']['url']; ?>)">
+    <div class="title"><?php echo $academy['title']; ?></div>
+    <div class="text"><?php echo $academy['text']; ?></div>
+    <div class="badge"><?php echo $academy['badge']; ?></div>
+    <div class="icon"><img src="<?php echo $academy['image']['url']; ?>"></div>
+
+    <a class="btn <?php echo $academy['cta_color']; ?>"
+      href="<?php echo $academy["cta"]["url"]; ?>"><?php echo $academy["cta"]["title"]; ?></a>
+  </div>
+  <?php endif; ?>
+
+  <?php if (get_sub_field('show_resources')): ?>
+  <div class="resources-grid">
+    <?php 
       $resources = get_sub_field('resources');
       foreach($resources as $resource):  ?>
 
-      <?php 
+    <?php 
                       $_postFields = get_fields($resource->ID);
                       $terms = get_the_terms($resource->ID, 'resources_cat');
                       $cat = $terms[0]->slug;
                   ?>
 
-      <?php if ($cat == 'videos') : ?>
-      <?php 
+    <?php if ($cat == 'videos') : ?>
+    <?php 
                           if ($_postFields['video']['video_type'] == 'online') {
                               $url = $_postFields['video']['video_link'];
                           } elseif ($_postFields['video']['video_type'] == 'file') {
@@ -868,39 +907,39 @@ case 'useful_resources' : ?>
                               $data = '';
                           }
                           ?>
-      <a <?php echo $data ?> href="<?php echo esc_url($url); ?>" class="grid-item videos"
-        style="--color: <?php echo $_postFields['color']; ?>; --img: url('<?php echo $_postFields['video_style']['background_image']['sizes']['medium_large']; ?>')">
-        <div class="item--global">
-          <div class="category"><?php echo $terms[0]->name; ?></div>
+    <a <?php echo $data ?> href="<?php echo esc_url($url); ?>" class="grid-item videos"
+      style="--color: <?php echo $_postFields['color']; ?>; --img: url('<?php echo $_postFields['video_style']['background_image']['sizes']['medium_large']; ?>')">
+      <div class="item--global">
+        <div class="category"><?php echo $terms[0]->name; ?></div>
+      </div>
+      <div class="item--details <?php echo $_postFields['video_style']['text_color']; ?>">
+        <div class="title"><?php echo $_postFields['title']; ?></div>
+      </div>
+      <img class="play" src="<?php add_img_html('play-button.svg'); ?>" alt="">
+    </a>
+    <?php else : ?>
+    <a href="<?php echo esc_url($_postFields['link']); ?>" class="grid-item <?php echo $cat; ?>"
+      style="--img: url('<?php echo $_postFields['picture']['sizes']['medium_large'] ?>')<?php if ($_postFields['color']): ?>; --color: <?php echo $_postFields['color']; ?><?php endif; ?>">
+      <div class="item--global">
+        <div class="category">
+          <?php if ($resource->post_title !== '') { echo $resource->post_title; } else { echo $terms[0]->name; } ?>
         </div>
-        <div class="item--details <?php echo $_postFields['video_style']['text_color']; ?>">
-          <div class="title"><?php echo $_postFields['title']; ?></div>
+        <?php if ($cat == 'webinars') : ?>
+        <div class="webinar-speaker">
+          <img src="<?php echo $_postFields['speaker']['picture']['sizes']['thumbnail']; ?>"
+            alt="<?php echo esc_attr($_postFields['speaker']['name']); ?>">
+          <p class="name"><?php echo $_postFields['speaker']['name']; ?></p>
+          <p class="title"><?php echo $_postFields['speaker']['title']; ?></p>
+          <p class="location"><?php echo $_postFields['speaker']['company']; ?></p>
         </div>
-        <img class="play" src="<?php add_img_html('play-button.svg'); ?>" alt="">
-      </a>
-      <?php else : ?>
-      <a href="<?php echo esc_url($_postFields['link']); ?>" class="grid-item <?php echo $cat; ?>"
-        style="--img: url('<?php echo $_postFields['picture']['sizes']['medium_large'] ?>')<?php if ($_postFields['color']): ?>; --color: <?php echo $_postFields['color']; ?><?php endif; ?>">
-        <div class="item--global">
-          <div class="category">
-            <?php if ($resource->post_title !== '') { echo $resource->post_title; } else { echo $terms[0]->name; } ?>
-          </div>
-          <?php if ($cat == 'webinars') : ?>
-          <div class="webinar-speaker">
-            <img src="<?php echo $_postFields['speaker']['picture']['sizes']['thumbnail']; ?>"
-              alt="<?php echo esc_attr($_postFields['speaker']['name']); ?>">
-            <p class="name"><?php echo $_postFields['speaker']['name']; ?></p>
-            <p class="title"><?php echo $_postFields['speaker']['title']; ?></p>
-            <p class="location"><?php echo $_postFields['speaker']['company']; ?></p>
-          </div>
-          <?php endif; ?>
-        </div>
-        <div class="item--details">
-          <div class="title"><?php echo $_postFields['title']; ?></div>
-          <div class="button-ct">
-            <p class="date"><?php echo $_postFields['date']; ?></p>
-            <button class="btn btn-primary">
-              <?php if ($cat == 'webinars') {
+        <?php endif; ?>
+      </div>
+      <div class="item--details">
+        <div class="title"><?php echo $_postFields['title']; ?></div>
+        <div class="button-ct">
+          <p class="date"><?php echo $_postFields['date']; ?></p>
+          <button class="btn btn-primary">
+            <?php if ($cat == 'webinars') {
                                               $date = strtotime($_postFields['date']);
                                               if ($date <= time()) {
                                                   pll_e('Watch now!');
@@ -908,54 +947,64 @@ case 'useful_resources' : ?>
                                                   pll_e('Register now!');
                                               }
                                           } else { pll_e('Read more'); } ?>
-            </button>
-          </div>
+          </button>
         </div>
-      </a>
-      <?php endif; ?>
-      <?php endforeach; ?>
-
-    </div>
-
-    <?php if (get_sub_field('academy_position') != 'none'): ?>
-    <?php $academy = get_sub_field('gatling_academy'); ?>
-    <div class="gatling-academy" style="background-image:url(<?php echo $academy['background']['url']; ?>)">
-      <div class="title"><?php echo $academy['title']; ?></div>
-      <div class="text"><?php echo $academy['text']; ?></div>
-      <div class="badge"><?php echo $academy['badge']; ?></div>
-      <div class="icon"><img src="<?php echo $academy['image']['url']; ?>"></div>
-
-      <a class="btn <?php echo $academy['cta_color']; ?>"
-        href="<?php echo $academy["cta"]["url"]; ?>"><?php echo $academy["cta"]["title"]; ?></a>
-    </div>
+      </div>
+    </a>
     <?php endif; ?>
-    <?php if (get_sub_field('link')):
-                $link = get_sub_field('link'); ?>
-    <a href="<?php echo $link['url']; ?>" class="mobile-link link text-center"><?php echo $link['title']; ?> <span
-        class="arrow-char">→</span></a>
+    <?php endforeach; ?>
 
-    <?php endif; ?>
   </div>
+  <?php endif; ?>
+
+  <?php if (get_sub_field('link')):
+                $link = get_sub_field('link'); ?>
+  <a href="<?php echo $link['url']; ?>" class="mobile-link link text-center"><?php echo $link['title']; ?> <span
+      class="arrow-char">→</span></a>
+
+  <?php endif; ?>
 </div>
 <?php break;
 
 case 'get_started' : ?>
 <div class="get-started-block container">
-  <?php while (have_rows('block')): ?>
+  <?php while (have_rows('blocks')): the_row(); ?>
   <div class="block">
     <div class="icon">
-      <?php $img = get_sub_field('image'); ?>
+      <?php $img = get_sub_field('icon'); ?>
       <img src="<?php echo $img['url']; ?>" alt="">
     </div>
-    <div class="title"><?php the_sub_field('title'); ?></div>
+    <div class="title -accent-<?php the_sub_field('accent_color'); ?>"><?php the_sub_field('title'); ?></div>
     <div class="text"><?php the_sub_field('text'); ?></div>
   </div>
   <?php endwhile; ?>
 </div>
 <?php break;
 
+case 'protips' : ?>
+<div class="protips-block container">
+  <h2 class="h2 text-center"><?php the_sub_field('title'); ?></h2>
+  <div class="tips">
+    <?php 
+      $i = 1;
+      while (have_rows('tips')): the_row(); ?>
+    <div class="tip">
+      <div class="number"><?php echo $i; ?></div>
+      <div class="tip-content">
+        <div class="tip-title"><?php the_sub_field('title'); ?></div>
+        <div class="tip-text"><?php the_sub_field('text'); ?></div>
+      </div>
+      <?php $link = get_sub_field('cta'); ?>
+      <a class="btn <?php the_sub_field('cta_color'); ?>" href="<?php echo $link['url']; ?>">
+        <?php echo $link['title']; ?></a>
+    </div>
+    <?php $i++; endwhile; ?>
+  </div>
+</div>
+<?php break;
+
       default:
-        echo "Flexible content not defined";
+        echo "Flexible content not defined ".get_row_layout();
     endswitch;
   }
 ?>

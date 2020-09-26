@@ -2469,6 +2469,14 @@
   .block-content {
     flex-grow: 1;
 
+    .icon {
+      width: 66px;
+      height: 66px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+
     h2, h4 {
       color: #1D262C;
     }
@@ -2491,6 +2499,11 @@
 
     .btn {
       margin-top: 50px;
+    }
+
+    .link {
+      display: inline-block;
+      margin-top: 15px;
     }
   }
 
@@ -2576,21 +2589,6 @@
 .useful-resources-block {
   padding: 50px 0 0 50px;
 
-  .useful-resources-content {
-    display: flex;
-    flex-direction: column;
-
-    &.-inversed {
-      .resources-grid {
-        order: 2;
-      }
-      .gatling-academy {
-        order: 1;
-      }
-    }
-  }
-
-
   .h2 {
     font-size: 3.3rem;
     margin-bottom: 60px;
@@ -2599,11 +2597,16 @@
   .link {
     display: block;
     margin-top: 60px;
-    order: 3;
   }
 
-  .resources-grid {
-    order: 1;
+  .see-more {
+    .text {
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      margin-bottom: 60px;
+    }
   }
 
   .gatling-academy {
@@ -2616,7 +2619,6 @@
     background-size: contain;
     padding: 30px;
     position: relative;
-    order: 2;
 
     .title {
       font-size: 2.2rem;
@@ -2662,6 +2664,111 @@
       position: absolute;
       bottom: 30px;
       right: 30px;
+    }
+  }
+}
+
+.get-started-block {
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+
+  .block {
+    width: calc(50% - 8px);
+    background: white;
+    border: 1px solid #c0d0e4;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .icon {
+      border-radius: 50%;
+      width: 66px;
+      height: 66px;
+      object-fit: cover;
+      margin-bottom: 25px;
+    }
+    
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+
+      &.-accent-orange {
+        strong {
+          color: $primary;
+        }
+      }
+
+      &.-accent-purple {
+        strong {
+          color: $purple;
+        }
+      }
+
+      &.-accent-blue {
+        strong {
+          color: $secondary;
+        }
+      }
+    }
+
+    .text {
+      font-size: 1.3rem;
+      color: #748793
+    }
+  }
+
+}
+
+.protips-block {
+  .h2 {
+    font-size: 3.3rem;
+    margin-bottom: 60px;
+  }
+
+  .tip {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+
+    .number {
+      background: $primary;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .tip-content {
+      margin-left: 25px;
+      flex-grow: 1;
+
+      .tip-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: $darkGrey;
+      }
+
+      .tip-text {
+        font-size: 1.6rem;
+        color: $grey;
+      }
+    }
+
+    .btn {
+      margin-left: auto;
     }
   }
 }
