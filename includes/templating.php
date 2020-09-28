@@ -406,8 +406,11 @@
     <div class="text">
       <?php the_sub_field('text'); ?>
     </div>
-    <?php $link = get_sub_field('button_link'); ?>
+    <?php 
+    if (get_sub_field('button_link')): 
+    $link = get_sub_field('button_link'); ?>
     <a href="<?php echo $link['url']; ?>" class="btn btn-secondary"><?php echo $link['title']; ?></a>
+    <?php endif; ?>
   </div>
   <div class="release-info">
     <h3><img class="icon"
@@ -419,6 +422,17 @@
         <?php echo $value['information_value']; ?></li>
       <?php endforeach ;?>
     </ul>
+    <?php if (get_sub_field('information_button_1')):
+    $information_button_1 = get_sub_field('information_button_1'); ?>
+    <a href="<?php echo $information_button_1['url']; ?>" class="btn btn-icon btn-1"><img
+    src="<?php add_img_html('bookmark-icon.svg'); ?>"
+    alt="Icon"><?php echo $information_button_1['title']; ?></a>
+    <?php endif; 
+    if (get_sub_field('information_button_2')):
+    $information_button_2 = get_sub_field('information_button_2'); ?>
+    <a href="<?php echo $information_button_2['url']; ?>" class="btn btn-icon purple btn-2"><img
+    src="<?php add_img_html('doc-icon.svg');?>" alt="Icon"><?php echo $information_button_2['title']; ?></a>
+    <?php endif; ?>
   </div>
 </div>
 <?php break;
@@ -854,16 +868,22 @@
 
 case 'useful_resources' : ?>
 <div class="useful-resources-block container">
-  <?php if (get_field('title')): ?>
+  <?php if (get_sub_field('title')): ?>
   <h2 class="text-center h2"><?php the_sub_field('title'); ?></h2>
   <?php endif; ?>
 
   <?php if (get_sub_field('show_see_more')): 
-    $see_more = get_sub_field('see_more'); ?>
+    $see_more = get_sub_field('see_more');  ?>
   <div class="see-more text-center">
     <div class="text"><?php echo $see_more['text']; ?></div>
-    <a class="btn <?php echo $see_more['cta_color']; ?>"
-      href="<?php echo $see_more["cta"]["url"]; ?>"><?php echo $see_more["cta"]["title"]; ?></a>
+    <?php if (count($see_more['buttons'])): ?>
+    <div class="see-more-buttons">
+      <?php foreach ($see_more['buttons'] as $button): ?>
+      <a class="btn <?php echo $button['cta_color']; ?>"
+        href="<?php echo $button["cta"]["url"]; ?>"><?php echo $button["cta"]["title"]; ?></a>
+      <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
   </div>
   <?php endif; ?>
 

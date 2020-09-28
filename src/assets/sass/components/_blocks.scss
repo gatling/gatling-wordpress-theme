@@ -1201,10 +1201,6 @@
     width: 75%;
     padding-right: 50px;
 
-    p {
-      padding-left: 50px;
-    }
-
     .btn {
       margin-top: 50px;
       margin-left: 50px;
@@ -1239,6 +1235,31 @@
       li {
         margin-bottom: 20px;
         line-height: 1.8rem;
+      }
+    }
+
+    .btn-1 {
+      background-color: #8a94fc;
+    }
+
+    .btn {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (max-width: 1100px) {
+
+      .btn {
+        width: 90%;
+        display: block;
+        max-width: 350px;
+
+        @include push--auto;
       }
     }
   }
@@ -2138,31 +2159,11 @@
       }
     }
 
-    .btn-1 {
-      background-color: #8a94fc;
-    }
-
-    .btn {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 15px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
+    
 
     @media screen and (max-width: 1100px) {
       width: 100%;
       margin-top: 30px;
-
-      .btn {
-        width: 90%;
-        display: block;
-        max-width: 350px;
-
-        @include push--auto;
-      }
     }
 
     @media screen and (max-width: 600px) {
@@ -2604,9 +2605,17 @@
       margin-bottom: 30px;
     }
 
-    .btn {
-      margin-bottom: 60px;
+    .see-more-buttons {
+      display: flex;
+      justify-content: center;
+
+      .btn {
+        margin-bottom: 60px;
+        margin: 0 7px 60px 7px;
+      }
     }
+
+    
   }
 
   .gatling-academy {
