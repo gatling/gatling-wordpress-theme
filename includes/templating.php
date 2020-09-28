@@ -994,9 +994,14 @@ case 'protips' : ?>
         <div class="tip-title"><?php the_sub_field('title'); ?></div>
         <div class="tip-text"><?php the_sub_field('text'); ?></div>
       </div>
-      <?php $link = get_sub_field('cta'); ?>
+      <?php 
+      if (get_sub_field('cta_or_form') === 'cta'):
+      $link = get_sub_field('cta'); ?>
       <a class="btn <?php the_sub_field('cta_color'); ?>" href="<?php echo $link['url']; ?>">
         <?php echo $link['title']; ?></a>
+      <?php elseif (get_sub_field('cta_or_form') === 'form'): ?>
+        <?php the_sub_field('form'); ?>
+      <?php endif; ?>
     </div>
     <?php $i++; endwhile; ?>
   </div>

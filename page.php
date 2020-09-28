@@ -1,11 +1,15 @@
 <?php
   get_header();
   $_fields = get_fields();
+
+  if (get_field('small_header')) {
+    $_fields = get_field('simplified_header');
+  }
 ?>
 
 <main class="default-template">
   <section class="landing-screen
-  <?php if (get_field('small_top_screen')) echo '-small'; ?>">
+  <?php if (get_field('small_header')) echo '-small'; ?>">
     <div class="container">
       <div class="landing--text">
         <h1 class="text-<?php echo $_fields['title_color']; ?>">
@@ -13,7 +17,11 @@
             strip_the_field($_fields['landing_title'],'<strong><br>');
           ?>
         </h1>
+        <?php if (get_field('small_header')): ?>
+          <?php echo $_fields['landing_subtitle']; ?>
+        <?php else : ?>
         <p><?php echo $_fields['landing_subtitle']; ?></p>
+        <?php endif; ?>
         <?php if (!$_fields['show_image']) : ?>
           <?php if ($_fields['button_1']['button_link']) : ?>
             <a href="<?php echo $_fields['button_1']['button_link']; ?>" class="btn <?php echo $_fields['button_1']['button_color']; ?>"><?php echo $_fields['button_1']['button_text']; ?></a>
