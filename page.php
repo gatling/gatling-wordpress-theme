@@ -37,7 +37,12 @@
       <div class="landing--screenshot <?php if (!$_fields['landing_image']['image_in_browser']) : ?>image-only<?php endif; ?>">
         <?php if ($_fields['landing_image']['image_in_browser']) : ?>
           <div class="image-in-browser">
-            <?php echo gtl_image_with_srcset($_fields['landing_image']['image']); ?>
+            <?php 
+            if (get_field('show_video')):
+              the_field('video');
+            else :
+            echo gtl_image_with_srcset($_fields['landing_image']['image']); 
+            endif; ?>
           </div>
         <?php else: ?>
           <?php echo gtl_image_with_srcset($_fields['landing_image']['image']); ?>

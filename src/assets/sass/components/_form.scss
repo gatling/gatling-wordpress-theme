@@ -5,3 +5,27 @@
     margin-top: 5px;
   }
 }
+
+.hbspt-form, .hbspt-form form {
+
+  .hs-input {
+    background: #FFFFFF;
+    border: 1px solid #C0D0E4;
+    border-radius: 4px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+  
+  .hs-button {
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 30px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}

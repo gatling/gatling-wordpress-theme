@@ -2,12 +2,12 @@
   function get_flexible_block() {
     switch (get_row_layout()):
       case 'blocks_icon_text': ?>
-<?php if (get_sub_field('title')): ?>
-<h2 class="h2 text-center"><?php the_sub_field('title'); ?></h2>
-<?php endif; ?>
-<?php if (have_rows('block')): ?>
-
 <div class="container icon-block-ct">
+  <?php if (get_sub_field('title')): ?>
+  <h2 class="h2 text-center"><?php the_sub_field('title'); ?></h2>
+  <?php endif; ?>
+  <?php if (have_rows('block')): ?>
+  
   <div class="icon-block--wrapper advantages-slick">
     <?php while (have_rows('block')) : the_row(); ?>
     <article class="icon-block">
@@ -204,7 +204,6 @@
     <div class="text-center">
       <h2 class="h2"><?php the_sub_field('title'); ?></h2>
       <p class="header--text"><?php the_sub_field('subtitle'); ?></p>
-      <p class="text"><?php the_sub_field('text'); ?></p>
 
       <?php the_sub_field('form_code'); ?>
     </div>
@@ -1020,7 +1019,9 @@ case 'protips' : ?>
       <a class="btn <?php the_sub_field('cta_color'); ?>" href="<?php echo $link['url']; ?>">
         <?php echo $link['title']; ?></a>
       <?php elseif (get_sub_field('cta_or_form') === 'form'): ?>
-        <?php the_sub_field('form'); ?>
+        <div class="form_hupspot cta-<?php the_sub_field('cta_color'); ?>">
+          <?php the_sub_field('form'); ?>
+        </div>
       <?php endif; ?>
     </div>
     <?php $i++; endwhile; ?>
