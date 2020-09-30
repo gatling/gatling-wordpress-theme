@@ -11,7 +11,7 @@
   <section class="landing-screen
   <?php if (get_field('small_header')) echo '-small'; ?>">
     <div class="container">
-      <div class="landing--text">
+      <div class="landing--text cta-<?php echo $_fields['title_color']; ?>">
         <h1 class="text-<?php echo $_fields['title_color']; ?>">
           <?php
             strip_the_field($_fields['landing_title'],'<strong><br>');
