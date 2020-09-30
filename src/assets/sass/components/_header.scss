@@ -11,7 +11,7 @@
   top: 0;
   margin: 0;
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 991px) {
     padding: 15px 0;
     position: fixed;
     width: 100%;
@@ -26,7 +26,7 @@
   .main-logo {
     height: 60px;
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 991px) {
       height: 40px;
     }
   }
@@ -35,7 +35,7 @@
     display: flex;
     align-items: stretch;
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 991px) {
       &.active {
         .close-menu {
           display: block;
@@ -47,7 +47,7 @@
       padding: 0 25px;
       display: flex;
 
-      @media screen and (max-width: 992px) {
+      @media screen and (max-width: 991px) {
         display: block;
       }
     }
@@ -77,7 +77,7 @@
 
       &.-nochild {
         >a {
-          @media screen and (max-width: 992px) {
+          @media screen and (max-width: 991px) {
             font-size: 1.1rem;
             font-weight: 600;
             color: #a4a4a4;
@@ -86,7 +86,7 @@
             margin-bottom: 13px;
 
             &.active {
-              @media screen and (max-width: 992px) {
+              @media screen and (max-width: 991px) {
                 color: $primary;
               }
             }
@@ -96,7 +96,7 @@
       }
 
       >a {
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: 991px) {
           display: none;
         }
       }
@@ -104,7 +104,7 @@
       >.active {
         font-weight: 600;
 
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: 991px) {
           color: $primary;
         }
   
@@ -117,7 +117,7 @@
           @include pseudo;
           @include push--auto;
   
-          @media screen and (max-width: 992px) {
+          @media screen and (max-width: 991px) {
             display: none;
           }
         }
@@ -174,7 +174,7 @@
           top: -5px;
           left: 20px;
 
-          @media screen and (max-width: 992px) {
+          @media screen and (max-width: 991px) {
             display: none;
           }
         }
@@ -188,7 +188,7 @@
             margin-right: 0;
           }
 
-          @media screen and (max-width: 992px) {
+          @media screen and (max-width: 991px) {
             margin-right: 0;
             margin-bottom: 25px;
 
@@ -244,7 +244,7 @@
         }
 
 
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: 991px) {
           opacity: 1;
           margin-top: 5px;
           position: static;
@@ -259,7 +259,7 @@
     .button-end {
       padding-top: 0;
 
-      @media screen and (max-width: 992px) {
+      @media screen and (max-width: 991px) {
         display: none;
       }
     }
@@ -276,7 +276,7 @@
       }
     }
 
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 991px) {
       position: absolute;
       left: 10px;
       top: 10px;
@@ -304,7 +304,7 @@
   left: 5px;
   display: none;
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 991px) {
     display: block;
   }
 }
@@ -366,7 +366,7 @@
 
   display: none;
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 991px) {
     &.active {
       display: block;
     }
