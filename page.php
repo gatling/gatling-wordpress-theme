@@ -1,18 +1,27 @@
 <?php
   get_header();
   $_fields = get_fields();
+
+  if (get_field('small_header')) {
+    $_fields = get_field('simplified_header');
+  }
 ?>
 
 <main class="default-template">
-  <section class="landing-screen">
+  <section class="landing-screen
+  <?php if (get_field('small_header')) echo '-small'; ?>">
     <div class="container">
-      <div class="landing--text">
+      <div class="landing--text cta-<?php echo $_fields['title_color']; ?>">
         <h1 class="text-<?php echo $_fields['title_color']; ?>">
           <?php
             strip_the_field($_fields['landing_title'],'<strong><br>');
           ?>
         </h1>
+        <?php if (get_field('small_header')): ?>
+          <?php echo $_fields['landing_subtitle']; ?>
+        <?php else : ?>
         <p><?php echo $_fields['landing_subtitle']; ?></p>
+        <?php endif; ?>
         <?php if (!$_fields['show_image']) : ?>
           <?php if ($_fields['button_1']['button_link']) : ?>
             <a href="<?php echo $_fields['button_1']['button_link']; ?>" class="btn <?php echo $_fields['button_1']['button_color']; ?>"><?php echo $_fields['button_1']['button_text']; ?></a>
@@ -28,7 +37,12 @@
       <div class="landing--screenshot <?php if (!$_fields['landing_image']['image_in_browser']) : ?>image-only<?php endif; ?>">
         <?php if ($_fields['landing_image']['image_in_browser']) : ?>
           <div class="image-in-browser">
-            <?php echo gtl_image_with_srcset($_fields['landing_image']['image']); ?>
+            <?php 
+            if (get_field('show_video')):
+              the_field('video');
+            else :
+            echo gtl_image_with_srcset($_fields['landing_image']['image']); 
+            endif; ?>
           </div>
         <?php else: ?>
           <?php echo gtl_image_with_srcset($_fields['landing_image']['image']); ?>

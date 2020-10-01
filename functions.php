@@ -108,7 +108,57 @@ function my_get_menu($location) {
     }
   }
 
+
   return $menu_ordered;
+}
+
+function nnki_get_menu($location) {
+  $menu_locations = get_nav_menu_locations();
+  $hero_menu = $menu_locations[$location];
+  $menu_items = wp_get_nav_menu_items( $hero_menu );
+  
+  $menu_ordered = array();
+
+  $parent = null;
+  $parent_int = null;
+
+  foreach ($menu_items as $item) {
+    if ($item->menu_item_parent == 0) {
+      $menu_ordered[$item->ID] = $item;
+      $menu_ordered[$item->ID]->children = array();
+      $parent = $item;
+    } else {
+      if ($item->menu_item_parent == $parent->ID) {
+        $menu_ordered[$parent->ID]->children[$item->ID] = $item;
+        $menu_ordered[$parent->ID]->children[$item->ID]->children = array();
+        $parent_int = $item;
+      } else if ($item->menu_item_parent == $parent_int->ID) {
+        $menu_ordered[$parent->ID]->children[$parent_int->ID]->children[] = $item;
+      }
+    }
+  }  
+
+  return $menu_ordered;
+}
+
+function is_child_active($menu_item, $page_url) {
+  foreach($menu_item->children as $child) {
+    if ($child->url == $page_url) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function is_grandchild_active($menu_item, $page_url) {
+  foreach($menu_item->children as $child) {
+    foreach($child->children as $subchild) {
+      if ($subchild->url == $page_url) {
+        return true;
+      }
+    }    
+  }
+  return false;
 }
 
 // Remove admin bar inline css

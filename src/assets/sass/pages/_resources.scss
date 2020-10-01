@@ -273,255 +273,257 @@
       }
     }
 
-    .resources-grid {
-      .grid-item {
-        width: calc(100% / 3 - 20px);
-        height: 250px;
-        margin-bottom: 40px;
-        box-shadow: 0 0 10px 0 rgba(103, 114, 229, 0.11);
-        border-radius: 8px;
-        color: $black;
+    
+  }
+}
+
+.resources-grid {
+  .grid-item {
+    width: calc(100% / 3 - 20px);
+    height: 250px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px 0 rgba(103, 114, 229, 0.11);
+    border-radius: 8px;
+    color: $black;
+    display: flex;
+    padding: 30px;
+    position: relative;
+    background: $white;
+
+    &::after {
+      clip-path: polygon(0 65%, 100% 50%, 100% 100%, 0% 100%);
+      border-radius: 0 0 8px 8px;
+      display: block;
+      content: "";
+      background: var(--color, $black);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+
+    //content
+    .item--global,
+    .item--details {
+      position: relative;
+      z-index: 10;
+      color: $white;
+    }
+
+    .item--global {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .category {
+        background: var(--color, $black);
+        border-radius: 12.5px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-align: center;
+        color: $white;
+        padding: 5px 10px;
+        min-width: 100px;
+      }
+    }
+
+    .item--details {
+      width: 70%;
+      text-align: right;
+      padding-left: 20px;
+
+      .reference {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+
+    &.use-cases,
+    &.webinars,
+    &.white-papers {
+      .item--details {
         display: flex;
-        padding: 30px;
-        position: relative;
-        background: $white;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
 
-        &::after {
-          clip-path: polygon(0 65%, 100% 50%, 100% 100%, 0% 100%);
-          border-radius: 0 0 8px 8px;
-          display: block;
-          content: "";
-          background: var(--color, $black);
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          left: 0;
-          bottom: 0;
+        .reference {
+          color: $black;
         }
 
-        //content
-        .item--global,
-        .item--details {
-          position: relative;
-          z-index: 10;
-          color: $white;
+        .title p {
+          font-size: 2.2rem;
+          font-weight: normal;
+          line-height: 2.5rem;
+          // color: $;
+
+          strong {
+            font-weight: bold;
+          }
         }
 
-        .item--global {
-          width: 30%;
+        .button-ct {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
           align-items: center;
 
-          .category {
-            background: var(--color, $black);
-            border-radius: 12.5px;
+          .date {
             font-size: 1.1rem;
-            font-weight: 500;
-            text-align: center;
-            color: $white;
-            padding: 5px 10px;
-            min-width: 100px;
           }
-        }
 
-        .item--details {
-          width: 70%;
-          text-align: right;
-          padding-left: 20px;
-
-          .reference {
-            font-size: 1.2rem;
+          .btn {
             font-weight: 600;
-          }
-        }
-
-        &.use-cases,
-        &.webinars,
-        &.white-papers {
-          .item--details {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-end;
-
-            .reference {
-              color: $black;
-            }
-
-            .title p {
-              font-size: 2.2rem;
-              font-weight: normal;
-              line-height: 2.5rem;
-              // color: $;
-
-              strong {
-                font-weight: bold;
-              }
-            }
-
-            .button-ct {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-
-              .date {
-                font-size: 1.1rem;
-              }
-
-              .btn {
-                font-weight: 600;
-                font-size: 1.1rem;
-                padding: 10px;
-                width: 145px;
-                margin: 10px 5px 10px 0;
-              }
-            }
-          }
-        }
-
-        &.webinars {
-          .webinar-speaker {
-            text-align: center;
-
-            p {
-              line-height: 1.4rem;
-            }
-
-            img {
-              height: 80px;
-              width: 80px;
-              object-fit: cover;
-              border-radius: 50%;
-              border: 0.5px solid $white;
-              margin-bottom: 5px;
-            }
-
-            .name {
-              text-transform: uppercase;
-              font-size: 1rem;
-              font-weight: 600;
-            }
-
-            .title {
-              font-size: 1.1rem;
-            }
-
-            .location {
-              font-size: 0.9rem;
-            }
-          }
-        }
-
-        &.use-cases,
-        &.videos,
-        &.webinars,
-        &.white-papers {
-          background-size: cover;
-          background-position: center;
-          background-image: var(--img);
-          flex-wrap: wrap;
-
-          .item--global {
-            .category {
-              background-color: $black;
-            }
-          }
-
-          .item--details {
-            &.white {
-              .reference,
-              .title p {
-                color: $white;
-              }
-            }
-
-            &.black {
-              .reference,
-              .title p {
-                color: $black;
-              }
-            }
-
-            .reference {
-              font-size: 1.2rem;
-              font-weight: 500;
-              margin-bottom: 5px;
-            }
-
-            .title p {
-              font-size: 2.2rem;
-              line-height: 2.5rem;
-
-              strong {
-                color: $white;
-                font-weight: bold;
-              }
-            }
-          }
-
-          .play {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            border-radius: 50%;
-            align-self: flex-end;
-            z-index: 100;
-            @include push--auto;
+            font-size: 1.1rem;
+            padding: 10px;
+            width: 145px;
+            margin: 10px 5px 10px 0;
           }
         }
       }
     }
 
-    @include mq("desktop", "max") {
-      .resources-grid {
-        .grid-item {
-          width: calc(50% - 20px);
+    &.webinars {
+      .webinar-speaker {
+        text-align: center;
+
+        p {
+          line-height: 1.4rem;
+        }
+
+        img {
+          height: 80px;
+          width: 80px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 0.5px solid $white;
+          margin-bottom: 5px;
+        }
+
+        .name {
+          text-transform: uppercase;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        .title {
+          font-size: 1.1rem;
+        }
+
+        .location {
+          font-size: 0.9rem;
         }
       }
     }
 
-    @include mq("tablet", "max") {
-      .resources-grid {
-        .grid-item {
-          width: 100%;
-          margin-bottom: 20px;
+    &.use-cases,
+    &.videos,
+    &.webinars,
+    &.white-papers {
+      background-size: cover;
+      background-position: center;
+      background-image: var(--img);
+      flex-wrap: wrap;
+
+      .item--global {
+        .category {
+          background-color: $black;
         }
       }
 
-      .resources-filters {
-        flex-direction: column;
-
-        .buttons {
-          display: none;
+      .item--details {
+        &.white {
+          .reference,
+          .title p {
+            color: $white;
+          }
         }
 
-        .dropdown-buttons {
-          display: flex;
-          flex-direction: column;
+        &.black {
+          .reference,
+          .title p {
+            color: $black;
+          }
         }
 
-        .search-input-ct {
-          position: relative;
-          width: 100%;
-          height: 55px;
-          margin-top: 15px;
+        .reference {
+          font-size: 1.2rem;
+          font-weight: 500;
+          margin-bottom: 5px;
+        }
 
-          .search-btn {
-            position: absolute;
-            right: 0;
+        .title p {
+          font-size: 2.2rem;
+          line-height: 2.5rem;
+
+          strong {
+            color: $white;
+            font-weight: bold;
           }
+        }
+      }
 
-          input.search-input {
-            max-width: initial;
-            opacity: 1;
-            pointer-events: all;
+      .play {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        border-radius: 50%;
+        align-self: flex-end;
+        z-index: 100;
+        @include push--auto;
+      }
+    }
+  }
+}
 
-            &.active {
-              max-width: initial;
-            }
-          }
+@include mq("desktop", "max") {
+  .resources-grid {
+    .grid-item {
+      width: calc(50% - 20px);
+    }
+  }
+}
+
+@include mq("tablet", "max") {
+  .resources-grid {
+    .grid-item {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .resources-filters {
+    flex-direction: column;
+
+    .buttons {
+      display: none;
+    }
+
+    .dropdown-buttons {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .search-input-ct {
+      position: relative;
+      width: 100%;
+      height: 55px;
+      margin-top: 15px;
+
+      .search-btn {
+        position: absolute;
+        right: 0;
+      }
+
+      input.search-input {
+        max-width: initial;
+        opacity: 1;
+        pointer-events: all;
+
+        &.active {
+          max-width: initial;
         }
       }
     }
