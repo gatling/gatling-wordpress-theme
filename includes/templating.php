@@ -886,6 +886,10 @@ case 'useful_resources' : ?>
   </div>
   <?php endif; ?>
 
+  <?php if (get_sub_field('title2')): ?>
+  <h2 class="text-center h2"><?php the_sub_field('title2'); ?></h2>
+  <?php endif; ?>
+
   <?php if (get_sub_field('show_academy')): ?>
   <?php $academy = get_sub_field('gatling_academy'); ?>
   <div class="gatling-academy" style="background-image:url(<?php echo $academy['background']['url']; ?>)">
@@ -897,6 +901,10 @@ case 'useful_resources' : ?>
     <a class="btn <?php echo $academy['cta_color']; ?>"
       href="<?php echo $academy["cta"]["url"]; ?>"><?php echo $academy["cta"]["title"]; ?></a>
   </div>
+  <?php endif; ?>
+
+  <?php if (get_sub_field('title3')): ?>
+  <h2 class="text-center h2"><?php the_sub_field('title3'); ?></h2>
   <?php endif; ?>
 
   <?php if (get_sub_field('show_resources')): ?>
@@ -987,15 +995,16 @@ case 'useful_resources' : ?>
 
 case 'get_started' : ?>
 <div class="get-started-block container">
-  <?php while (have_rows('blocks')): the_row(); ?>
-  <div class="block">
+  <?php while (have_rows('blocks')): the_row(); 
+  $link = get_sub_field('link'); ?>
+  <a class="block" href="<?php echo $link['url']; ?>">
     <div class="icon">
       <?php $img = get_sub_field('icon'); ?>
       <img src="<?php echo $img['url']; ?>" alt="">
     </div>
     <div class="title -accent-<?php the_sub_field('accent_color'); ?>"><?php the_sub_field('title'); ?></div>
     <div class="text"><?php the_sub_field('text'); ?></div>
-  </div>
+  </a>
   <?php endwhile; ?>
 </div>
 <?php break;
