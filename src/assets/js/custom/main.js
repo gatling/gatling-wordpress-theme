@@ -38,6 +38,15 @@ $(document).ready(function () {
     }
   });
 
+  if (!sessionStorage.getItem('academy-closed') == 1) {
+    $('#academy-message').addClass('-opened');
+  }
+
+  $('#close-academy').click(function() {
+    sessionStorage.setItem('academy-closed', 1);
+    $('#academy-message').removeClass('-opened');
+  });
+
   // SLICK
   $(".testimonials-slick").slick({
     centerMode: true,

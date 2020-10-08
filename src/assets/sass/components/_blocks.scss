@@ -645,8 +645,8 @@
 // Press slider
 
 .press {
-  padding-top: 140px;
-  padding-bottom: 90px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   @media screen and (max-width: 600px) {
     padding-top: 100px;
@@ -1213,8 +1213,8 @@
 .gatling-presentation {
   display: flex;
   align-items: flex-start;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   .presentation--content {
     width: 75%;
@@ -1601,7 +1601,7 @@
       }
 
       p img {
-        width: 50%;
+        max-width: 50%;
       }
 
       .btn {
@@ -1653,7 +1653,7 @@
 
 .price-comparison,
 .price-comparison-5 {
-  padding-top: 80px;
+  padding-top: 50px;
 
   .title {
     text-align: center;
@@ -1845,7 +1845,7 @@
 
         .btn {
           position: absolute;
-          bottom: 40px;
+          bottom: 20px;
           width: 80%;
           left: 10%;
         }
@@ -2252,8 +2252,8 @@
 // Table comparison block
 
 .table-comparison-block {
-  padding-top: 100px;
-  padding-bottom: 60px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   .subtitle {
     font-weight: 600;
@@ -2644,7 +2644,7 @@
 }
 
 .testimonials-block {
-  padding: 100px 0;
+  padding: 50px 0;
   .h2 {
     font-size: 3.3rem;
     margin-bottom: 60px;
@@ -2844,7 +2844,7 @@
 }
 
 .get-started-block {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;

@@ -23,11 +23,15 @@
     background-image: -webkit-linear-gradient(-80deg, #fff 55%, #f0f5fb 55%);
     overflow: hidden;
 
+    @media screen and (min-width: 992px) {
+      padding-top: 160px;
+    }
+
     &.-small {
-      padding-top: 40px;
+      padding-top: 80px;
       padding-bottom: 0;
 
-      @media screen and (max-width: 950px) {
+      @media screen and (max-width: 991px) {
         padding-top: 80px;
       }
 
@@ -58,10 +62,6 @@
       .landing--screenshot {
         width: 30%;
       }
-    }
-
-    @media screen and (max-width: 1150px) {
-      padding-top: 130px;
     }
 
     @media screen and (max-width: 950px) {
@@ -302,6 +302,42 @@
   }
 
   .section-05 {
+    background-image: linear-gradient(
+      to bottom,
+      #f0f5fb,
+      #f5f7fc,
+      #f9fafd,
+      #fcfcfe,
+      #ffffff
+    );
+  }
+
+  .section-06 {
+    background-image: url("../img/strip-patterns-02.svg"),
+      linear-gradient(to top, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
+
+    @include background(contain, center, repeat);
+  }
+
+  .section-07 {
+    background-image: linear-gradient(
+      to bottom,
+      #f0f5fb,
+      #f5f7fc,
+      #f9fafd,
+      #fcfcfe,
+      #ffffff
+    );
+  }
+
+  .section-08 {
+    background-image: url("../img/strip-patterns-02.svg"),
+      linear-gradient(to top, #f0f5fb, #f5f7fc, #f9fafd, #fcfcfe, #ffffff);
+
+    @include background(contain, center, repeat);
+  }
+
+  .section-09 {
     background-image: linear-gradient(
       to bottom,
       #f0f5fb,

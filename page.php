@@ -9,7 +9,9 @@
 
 <main class="default-template">
   <section class="landing-screen
-  <?php if (get_field('small_header')) echo '-small'; ?>">
+  <?php if (get_field('small_header')) echo '-small'; ?>
+  <?php $gatling_academy = get_field('gatling_academy', 'option');
+    if ($gatling_academy['show_message']) echo "-with-academy"; ?>">
     <div class="container">
       <div class="landing--text cta-<?php echo $_fields['title_color']; ?>">
         <h1 class="text-<?php echo $_fields['title_color']; ?>">

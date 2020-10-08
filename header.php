@@ -36,82 +36,96 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <header class="page-header">
-    <div class="navicon-ct">
-      <a class="navicon-button x">
-        <div class="navicon"></div>
-      </a>
-    </div>
-
-    <a class="splash-link" href="<?php echo get_home_url(); ?>"><img class="main-logo" src="<?php the_field('logo', 'option'); ?>" alt="Logo Gatling"></a>
-
-    <nav>
-      
-      <div class="main-menu">
-        <div class="close-menu">
-          <i class="fa fa-times"></i>
-        </div>
-        <?php
-          $menu = nnki_get_menu("main-nav");
-          $i = 0;
-          foreach($menu as $item) :
-            ?>
-            <?php if ($i < (count($menu)-1)) : ?>
-            <div class="submenu-li <?php if ($i != 0): 
-                echo '-nochild';
-              endif; ?>">
-              <a class="menu-link
-              <?php 
-              if (get_permalink($the_page) == $item->url || is_child_active($item, get_permalink($the_page)) || is_grandchild_active($item, get_permalink($the_page))) {
-                echo "active";
-              }
-              ?>
-              " href="<?php echo $item->url; ?>">
-                <?php echo $item->title; ?>
-              </a>
-
-              <?php if (count($item->children)): ?>
-              <div class="submenu
-              <?php if ($i != 0): 
-                echo '-nochild';
-              endif; ?>
-              ">
-                <div class="arrow"></div>
-                <?php foreach($item->children as $child) { ?>
-                <div class="submenu-content">
-                  <a href="<?php echo $child->url; ?>" 
-                  <?php if (get_permalink($the_page) == $child->url || is_child_active($child, get_permalink($the_page))) {
-                    echo "class='active'";
-                  } ?>>
-                    <?php echo $child->title; ?>
-                  </a>
-
-                  <?php if (count($child->children)): ?>
-                    <div class="subsubmenu">
-                      <?php foreach ($child->children as $subchild) { ?>
-                        <a href="<?php echo $subchild->url; ?>" <?php if (get_permalink($the_page) == $subchild->url) {
-                    echo "class='active'";
-                  } ?>>
-                          <?php echo $subchild->title; ?>
-                        </a>
-                      <?php } ?>
-                    </div>
-                  <?php endif; ?>
-                </div>
-                
-                <?php } ?>
-              </div>
-              <?php endif; ?>
-            </div>
-            <?php else : ?>
-              <div class="button-end">
-                <a href="<?php echo $item->url; ?>" class="btn btn-primary"><?php echo $item->title; ?></a>
-            </div>
-            <?php endif; ?>           
-          <?php 
-          $i++;
-          endforeach; ?>
+    <?php
+    $gatling_academy = get_field('gatling_academy', 'option');
+    if ($gatling_academy['show_message']): ?>
+    <div class="academy-message" id="academy-message">
+      <span><?php echo $gatling_academy['text']; ?></span>
+      <div class="close-academy" id="close-academy">
+        <i class="fa fa-times"></i>
       </div>
-    </nav>
+    </div>
+    <?php endif; ?>
+    <div class="navigation">
+      <div class="navicon-ct">
+        <a class="navicon-button x">
+          <div class="navicon"></div>
+        </a>
+      </div>
+  
+      <a class="splash-link" href="<?php echo get_home_url(); ?>"><img class="main-logo" src="<?php the_field('logo', 'option'); ?>" alt="Logo Gatling"></a>
+  
+      <nav>
+        
+        <div class="main-menu">
+          <div class="close-menu">
+            <i class="fa fa-times"></i>
+          </div>
+          <?php
+            $menu = nnki_get_menu("main-nav");
+            $i = 0;
+            foreach($menu as $item) :
+              ?>
+              <?php if ($i < (count($menu)-1)) : ?>
+              <div class="submenu-li <?php if ($i != 0): 
+                  echo '-nochild';
+                endif; ?>">
+                <a class="menu-link
+                <?php 
+                if (get_permalink($the_page) == $item->url || is_child_active($item, get_permalink($the_page)) || is_grandchild_active($item, get_permalink($the_page))) {
+                  echo "active";
+                }
+                ?>
+                " href="<?php echo $item->url; ?>">
+                  <?php echo $item->title; ?>
+                </a>
+  
+                <?php if (count($item->children)): ?>
+                <div class="submenu
+                <?php if ($i != 0): 
+                  echo '-nochild';
+                endif; ?>
+                ">
+                  <div class="arrow"></div>
+                  <?php foreach($item->children as $child) { ?>
+                  <div class="submenu-content">
+                    <a href="<?php echo $child->url; ?>" 
+                    <?php if (get_permalink($the_page) == $child->url || is_child_active($child, get_permalink($the_page))) {
+                      echo "class='active'";
+                    } ?>>
+                      <?php echo $child->title; ?>
+                    </a>
+  
+                    <?php if (count($child->children)): ?>
+                      <div class="subsubmenu">
+                        <?php foreach ($child->children as $subchild) { 
+                          if ($subchild->url == '#download') $href='javascript:DownloadAndRedirect()';
+                          else $href = $subchild->url; ?>
+                          <a href="<?php echo $href; ?>" <?php if (get_permalink($the_page) == $subchild->url) {
+                      echo "class='active'";
+                    } ?>>
+                            <?php echo $subchild->title; ?>
+                          </a>
+                        <?php } ?>
+                      </div>
+                    <?php endif; ?>
+                  </div>
+                  
+                  <?php } ?>
+                </div>
+                <?php endif; ?>
+              </div>
+              <?php else : ?>
+                <div class="button-end">
+                  <a href="<?php echo $item->url; ?>" class="btn btn-primary"><?php echo $item->title; ?></a>
+              </div>
+              <?php endif; ?>           
+            <?php 
+            $i++;
+            endforeach; ?>
+        </div>
+      </nav>
+    </div>
 
     <div class="mask-menu"></div>
   </header>

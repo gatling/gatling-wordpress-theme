@@ -1,9 +1,4 @@
 .page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  font-size: 1.5rem;
   z-index: 9000;
   background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
@@ -12,7 +7,6 @@
   margin: 0;
 
   @media screen and (max-width: 991px) {
-    padding: 15px 0;
     position: fixed;
     width: 100%;
     z-index: 9999;
@@ -21,6 +15,14 @@
     .splash-link {
       margin: auto;
     }
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    font-size: 1.5rem;
   }
 
   .main-logo {
@@ -141,13 +143,13 @@
           display: block;
           
           .submenu-content {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
 
             &:last-child {
               margin-bottom: 0;
             }
             >a {
-              font-size: 1.3rem;              
+              font-size: 1.4rem;              
               display: block;
               white-space: nowrap;
               text-transform: none;
@@ -221,8 +223,8 @@
 
           .subsubmenu {
             >a {
-              font-size: 1.3rem;
-              margin-bottom: 10px;
+              font-size: 1.4rem;
+              margin-bottom: 15px;
               display: block;
               white-space: nowrap;
 
@@ -295,6 +297,38 @@
       }
 
       
+    }
+  }
+
+  .academy-message {
+    background: rgba(103, 114, 229, 0.15);
+    height: 40px;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    color: $secondary-2;
+    font-size: 1.3rem;
+    padding: 0 20px;
+
+    @media screen and (min-width: 992px) {
+      &.-opened {
+        display: flex;
+      }
+    }
+
+    span {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      text-decoration: underline;
+      font-weight: bold;
+      color: $secondary-2;
+    }
+
+    .close-academy {
+      cursor: pointer;
     }
   }
 }

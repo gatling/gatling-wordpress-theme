@@ -179,6 +179,23 @@
       </div>
     </div>
   </section>
+
+  <section>
+    <div class="useful-resources-block container">
+    <?php if (get_field('show_academy')): ?>
+      <?php $academy = get_field('gatling_academy'); ?>
+      <div class="gatling-academy" style="background-image:url(<?php echo $academy['background']['url']; ?>)">
+        <div class="title"><?php echo $academy['title']; ?></div>
+        <div class="text"><?php echo $academy['text']; ?></div>
+        <div class="badge"><?php echo $academy['badge']; ?></div>
+        <div class="icon"><img src="<?php echo $academy['image']['url']; ?>"></div>
+
+        <a class="btn <?php echo $academy['cta_color']; ?>"
+          href="<?php echo $academy["cta"]["url"]; ?>"><?php echo $academy["cta"]["title"]; ?></a>
+      </div>
+      <?php endif; ?>                               
+    </div>
+  </section>
 </main>
 
 <?php 
