@@ -143,7 +143,7 @@
           display: block;
           
           .submenu-content {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
 
             &:last-child {
               margin-bottom: 0;
@@ -201,13 +201,13 @@
           
 
           >a {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: #A4A4A4;
             text-transform: uppercase;
             display: block;
 
-            margin-bottom: 13px;
+            margin-bottom: 18px;
             white-space: nowrap;
 
             &:hover, &.active {
@@ -224,7 +224,7 @@
           .subsubmenu {
             >a {
               font-size: 1.4rem;
-              margin-bottom: 15px;
+              margin-bottom: 18px;
               display: block;
               white-space: nowrap;
 
