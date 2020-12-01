@@ -62,7 +62,7 @@ $args = array(
 
 register_post_type('resources', $args);
 
-//Taxonomy RESOURCES CAT
+// Taxonomy RESOURCES CAT
 $labels = array(
 	'name' =>  'Resources categories',
 	'singular_name' => 'Resources Category',
@@ -76,6 +76,15 @@ register_taxonomy('resources_cat', 'resources', array(
   'show_admin_column' => true,
   'meta_box_cb' => false,
 ));
+
+// Exclude custom taxonomies from sitemap
+
+function sitemap_exclude_taxonomy($value, $taxonomy) {
+  $taxonomy_to_exclude = array('resources_cat');
+  return in_array($taxonomy, $taxonomy_to_exclude);
+}
+
+add_filter('wpseo_sitemap_exclude_taxonomy', 'sitemap_exclude_taxonomy', 10, 2);
 
 // Post thumbnail
 
