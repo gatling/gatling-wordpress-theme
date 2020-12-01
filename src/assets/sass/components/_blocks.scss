@@ -2940,6 +2940,7 @@
     .tip-content {
       margin-left: 25px;
       flex-grow: 1;
+      flex: 1;
 
       @media screen and (max-width: 767px) {
         max-width: calc(100% - 80px);

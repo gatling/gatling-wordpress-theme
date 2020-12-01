@@ -147,69 +147,17 @@
           background-color: $secondary;
         }
       }
-  
+
       &.cta-orange {
         .hs-button {
           background-color: $primary;
         }
       }
-  
+
       &.cta-purple {
         .hs-button {
           background-color: $secondary-2;
         }
-      }
-
-      .hbspt-form {
-        form {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: stretch;
-          justify-content: space-between;
-
-          >div {
-            width: calc(50% - 8px);
-
-            @media screen and (max-width: 550px) {
-              width: 100%;
-            }
-          }
-
-          label {
-            color: black;
-            font-size: 1.1rem;
-            font-weight: 500;
-          }
-
-          .input {
-            input {
-              height: 48px;
-              width: 100%;
-            }
-          }
-
-          .legal-consent-container {
-            width: 100%;
-            margin-top: 20px;
-
-            p {
-              padding-left: 0;
-              font-size: 1.3rem;
-              font-weight: 500;
-              line-height: 130%;
-              margin-bottom: 15px;
-            }
-          }
-
-          .hs_submit {
-            width: 100%;
-
-            input {
-              width: 100%;
-            }
-          }
-        }
-
       }
 
       @media screen and (max-width: 950px) {
@@ -263,6 +211,76 @@
         h1,
         p {
           padding-left: 0;
+        }
+      }
+    }
+  }
+
+  section {
+    .hbspt-form {
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+
+        > div {
+          width: calc(50% - 8px);
+
+          @media screen and (max-width: 550px) {
+            width: 100%;
+          }
+        }
+
+        label {
+          color: black;
+          font-size: 1.1rem;
+          font-weight: 500;
+        }
+
+        .input {
+          input {
+            height: 48px;
+            width: 100%;
+          }
+        }
+
+        .legal-consent-container {
+          width: 100%;
+          margin-top: 20px;
+
+          p {
+            padding-left: 0;
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 130%;
+            margin-bottom: 15px;
+          }
+        }
+
+        .hs_submit {
+          width: 100%;
+
+          input {
+            width: 100%;
+          }
+        }
+
+        .hs-error-msgs label {
+          color: #f2545b;
+        }
+
+        input.hs-input.error,
+        div.field.error input,
+        div.field.error textarea,
+        div.field.error .chzn-choices,
+        textarea.hs-input.error,
+        select.hs-input.error {
+          border-color: #c87872;
+        }
+
+        .hs-form-required {
+          color: red;
         }
       }
     }
