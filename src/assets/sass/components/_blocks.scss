@@ -360,21 +360,18 @@
 }
 
 .block-icons-values {
-
   .features--img {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
 
     @media screen and (max-width: 570px) {
-      
       flex-wrap: wrap;
       justify-content: center;
     }
   }
 
   .features--number {
-    
     display: flex;
 
     @media screen and (max-width: 570px) {
@@ -509,7 +506,7 @@
     object-fit: cover;
     object-position: top left;
   }
-  
+
   iframe {
     width: 100% !important;
     height: 100% !important;
@@ -1272,7 +1269,6 @@
     }
 
     @media screen and (max-width: 1100px) {
-
       .btn {
         width: 90%;
         display: block;
@@ -2178,8 +2174,6 @@
       }
     }
 
-    
-
     @media screen and (max-width: 1100px) {
       width: 100%;
       margin-top: 30px;
@@ -2472,7 +2466,7 @@
   .header--text {
     font-size: 1.6rem;
     margin-bottom: 10px;
-    font-weight: 600;;
+    font-weight: 600;
   }
 
   .text {
@@ -2481,12 +2475,11 @@
   }
 
   .hbspt-form form {
-
     display: flex;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
-  
+
     .hs-fieldtype-text {
       order: 10;
 
@@ -2504,10 +2497,10 @@
         @media screen and (max-width: 767px) {
           width: 100%;
         }
-  
+
         .hs-input {
-          height: 100%;          
-          border-radius: 4px 0px 0px 4px;          
+          height: 100%;
+          border-radius: 4px 0px 0px 4px;
           border-right: 0;
 
           @media screen and (max-width: 767px) {
@@ -2517,13 +2510,13 @@
         }
       }
     }
-    
+
     .legal-consent-container {
       order: 1;
       width: 100%;
       margin-bottom: 30px;
     }
-  
+
     .hs_submit {
       order: 20;
 
@@ -2533,18 +2526,18 @@
 
       .hs-button {
         border-radius: 0px 4px 4px 0px;
-        
+
         @media screen and (max-width: 767px) {
           width: 100%;
           border-radius: 4px;
         }
-  
+
         &:focus {
           outline: 0;
         }
       }
     }
-  
+
     .hs_error_rollup {
       width: 100%;
       order: 50;
@@ -2558,14 +2551,14 @@
   align-items: center;
   padding: 50px 0;
 
-  @media screen and (max-width:767px) {
+  @media screen and (max-width: 767px) {
     flex-wrap: wrap;
   }
 
   .block-content {
     flex-grow: 1;
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
       order: 2;
     }
 
@@ -2577,8 +2570,9 @@
       margin-bottom: 30px;
     }
 
-    h2, h4 {
-      color: #1D262C;
+    h2,
+    h4 {
+      color: #1d262c;
     }
 
     h2 {
@@ -2600,7 +2594,7 @@
     .btn {
       margin-top: 50px;
 
-      @media screen and (max-width:767px) {
+      @media screen and (max-width: 767px) {
         width: 100%;
         text-align: center;
       }
@@ -2617,7 +2611,7 @@
     width: 55%;
     flex-shrink: 0;
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
       width: 100%;
       margin-left: 0;
       margin-bottom: 30px;
@@ -2630,7 +2624,6 @@
   }
 
   &.-inversed {
-
     .block-content {
       order: 2;
     }
@@ -2677,7 +2670,6 @@
       }
 
       .testimonial-content {
-
         @media screen and (max-width: 767px) {
           width: 100%;
           text-align: center;
@@ -2694,10 +2686,9 @@
           font-size: 1.3rem;
 
           .author {
-            color: #1d262C;
+            color: #1d262c;
           }
         }
-        
       }
     }
 
@@ -2710,7 +2701,6 @@
         display: none;
       }
     }
-    
   }
 }
 
@@ -2746,8 +2736,6 @@
         margin: 0 7px 60px 7px;
       }
     }
-
-    
   }
 
   .gatling-academy {
@@ -2874,7 +2862,7 @@
       object-fit: cover;
       margin-bottom: 25px;
     }
-    
+
     .title {
       font-size: 2rem;
       font-weight: bold;
@@ -2901,10 +2889,9 @@
 
     .text {
       font-size: 1.3rem;
-      color: #748793
+      color: #748793;
     }
   }
-
 }
 
 .protips-block {
@@ -2971,7 +2958,6 @@
   }
 
   .form_hupspot {
-
     @media screen and (max-width: 767px) {
       width: 100%;
       margin-top: 20px;
@@ -2996,12 +2982,11 @@
     }
 
     .hbspt-form form {
-
       display: flex;
       justify-content: flex-end;
       align-items: stretch;
       flex-wrap: wrap;
-    
+
       .hs-fieldtype-text {
         order: 10;
 
@@ -3015,26 +3000,26 @@
         }
         .input {
           height: 100%;
-    
+
           .hs-input {
-            height: 100%;          
+            height: 100%;
             border-radius: 4px 0px 0px 4px;
-            border-right: 0;;
+            border-right: 0;
 
             @media screen and (max-width: 767px) {
               width: 100%;
-              border: 1px solid #C0D0E4;
+              border: 1px solid #c0d0e4;
               height: 48px;
               border-radius: 4px;
             }
           }
         }
       }
-      
+
       .legal-consent-container {
         display: none;
       }
-    
+
       .hs_submit {
         order: 20;
 
@@ -3042,20 +3027,20 @@
           width: 100%;
         }
         .hs-button {
-          border-radius: 0px 4px 4px 0px;    
-          height: 59px;    
+          border-radius: 0px 4px 4px 0px;
+          height: 59px;
           font-size: 1.6rem;
 
           @media screen and (max-width: 767px) {
             width: 100%;
           }
-    
+
           &:focus {
             outline: 0;
           }
         }
       }
-    
+
       .hs_error_rollup {
         width: 100%;
         order: 50;
@@ -3064,7 +3049,6 @@
       }
     }
   }
-  
 }
 
 // Overrides

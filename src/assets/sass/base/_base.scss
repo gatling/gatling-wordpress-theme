@@ -52,19 +52,19 @@ h3 {
   &.-purple {
     &::before {
       background-color: $purple;
-    }    
+    }
   }
 
   &.-orange {
     &::before {
       background-color: $primary;
-    }    
+    }
   }
 
   &.-blue {
     &::before {
       background-color: $secondary;
-    }    
+    }
   }
 
   &::before {

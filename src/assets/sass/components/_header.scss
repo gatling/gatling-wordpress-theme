@@ -41,7 +41,7 @@
       &.active {
         .close-menu {
           display: block;
-        }        
+        }
       }
     }
 
@@ -63,12 +63,9 @@
       }
     }
 
-
     .submenu-li {
       position: relative;
       padding-top: 20px;
-
-      
 
       &:hover {
         .submenu {
@@ -78,7 +75,7 @@
       }
 
       &.-nochild {
-        >a {
+        > a {
           @media screen and (max-width: 991px) {
             font-size: 1.1rem;
             font-weight: 600;
@@ -94,31 +91,30 @@
             }
           }
         }
-        
       }
 
-      >a {
+      > a {
         @media screen and (max-width: 991px) {
           display: none;
         }
       }
 
-      >.active {
+      > .active {
         font-weight: 600;
 
         @media screen and (max-width: 991px) {
           color: $primary;
         }
-  
+
         &::after {
           width: 14px;
           height: 2px;
           background-color: $primary;
           margin-top: 10px;
-  
+
           @include pseudo;
           @include push--auto;
-  
+
           @media screen and (max-width: 991px) {
             display: none;
           }
@@ -128,7 +124,7 @@
       .submenu {
         position: absolute;
         z-index: 9999;
-        background: #FFFFFF;
+        background: #ffffff;
         box-shadow: 0px 4px 20px rgba(177, 177, 177, 0.35);
         border-radius: 4px;
         padding: 25px;
@@ -141,15 +137,15 @@
 
         &.-nochild {
           display: block;
-          
+
           .submenu-content {
             margin-bottom: 18px;
 
             &:last-child {
               margin-bottom: 0;
             }
-            >a {
-              font-size: 1.4rem;              
+            > a {
+              font-size: 1.4rem;
               display: block;
               white-space: nowrap;
               text-transform: none;
@@ -184,7 +180,6 @@
         .submenu-content {
           position: relative;
           margin-right: 30px;
-          
 
           &:last-child {
             margin-right: 0;
@@ -198,19 +193,19 @@
               margin-bottom: 0;
             }
           }
-          
 
-          >a {
+          > a {
             font-size: 1.3rem;
             font-weight: 600;
-            color: #A4A4A4;
+            color: #a4a4a4;
             text-transform: uppercase;
             display: block;
 
             margin-bottom: 18px;
             white-space: nowrap;
 
-            &:hover, &.active {
+            &:hover,
+            &.active {
               color: $primary;
             }
 
@@ -219,10 +214,10 @@
               margin-right: 5px;
               min-width: 20px;
             }
-          } 
+          }
 
           .subsubmenu {
-            >a {
+            > a {
               font-size: 1.4rem;
               margin-bottom: 18px;
               display: block;
@@ -244,7 +239,6 @@
             }
           }
         }
-
 
         @media screen and (max-width: 991px) {
           opacity: 1;
@@ -295,8 +289,6 @@
       &.active {
         display: block;
       }
-
-      
     }
   }
 
